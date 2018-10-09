@@ -19,6 +19,10 @@ class EntryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func didPressStartButton(_ sender: Any) {
+        let firstScene = FirstSceneViewController(nibName: nil, bundle: nil)
+        present(firstScene, animated: true, completion: nil)
+    }
 
 }
 

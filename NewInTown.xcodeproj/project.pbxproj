@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D24D011216D2BD7005E63B5 /* FirstSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D24D00B216D2BD7005E63B5 /* FirstSceneInteractor.swift */; };
+		3D24D012216D2BD7005E63B5 /* FirstSceneModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D24D00C216D2BD7005E63B5 /* FirstSceneModels.swift */; };
+		3D24D013216D2BD7005E63B5 /* FirstScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D24D00D216D2BD7005E63B5 /* FirstScenePresenter.swift */; };
+		3D24D014216D2BD7005E63B5 /* FirstSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D24D00E216D2BD7005E63B5 /* FirstSceneRouter.swift */; };
+		3D24D015216D2BD7005E63B5 /* FirstSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D24D00F216D2BD7005E63B5 /* FirstSceneViewController.swift */; };
+		3D24D016216D2BD7005E63B5 /* FirstSceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D24D010216D2BD7005E63B5 /* FirstSceneWorker.swift */; };
+		3D24D018216D2BF1005E63B5 /* FirstSceneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D24D017216D2BF1005E63B5 /* FirstSceneViewController.xib */; };
 		3DA6E57D21693D8600F85A37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6E57C21693D8600F85A37 /* AppDelegate.swift */; };
 		3DA6E57F21693D8600F85A37 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6E57E21693D8600F85A37 /* EntryViewController.swift */; };
 		3DA6E58221693D8600F85A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DA6E58021693D8600F85A37 /* Main.storyboard */; };
@@ -35,6 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D24D00B216D2BD7005E63B5 /* FirstSceneInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSceneInteractor.swift; sourceTree = "<group>"; };
+		3D24D00C216D2BD7005E63B5 /* FirstSceneModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSceneModels.swift; sourceTree = "<group>"; };
+		3D24D00D216D2BD7005E63B5 /* FirstScenePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScenePresenter.swift; sourceTree = "<group>"; };
+		3D24D00E216D2BD7005E63B5 /* FirstSceneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSceneRouter.swift; sourceTree = "<group>"; };
+		3D24D00F216D2BD7005E63B5 /* FirstSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSceneViewController.swift; sourceTree = "<group>"; };
+		3D24D010216D2BD7005E63B5 /* FirstSceneWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSceneWorker.swift; sourceTree = "<group>"; };
+		3D24D017216D2BF1005E63B5 /* FirstSceneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstSceneViewController.xib; sourceTree = "<group>"; };
 		3DA6E57921693D8600F85A37 /* NewInTown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewInTown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DA6E57C21693D8600F85A37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DA6E57E21693D8600F85A37 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +93,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D24D00A216D2B83005E63B5 /* FirstScene */ = {
+			isa = PBXGroup;
+			children = (
+				3D24D00B216D2BD7005E63B5 /* FirstSceneInteractor.swift */,
+				3D24D00C216D2BD7005E63B5 /* FirstSceneModels.swift */,
+				3D24D00D216D2BD7005E63B5 /* FirstScenePresenter.swift */,
+				3D24D00E216D2BD7005E63B5 /* FirstSceneRouter.swift */,
+				3D24D00F216D2BD7005E63B5 /* FirstSceneViewController.swift */,
+				3D24D010216D2BD7005E63B5 /* FirstSceneWorker.swift */,
+				3D24D017216D2BF1005E63B5 /* FirstSceneViewController.xib */,
+			);
+			path = FirstScene;
+			sourceTree = "<group>";
+		};
 		3DA6E57021693D8600F85A37 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +132,7 @@
 		3DA6E57B21693D8600F85A37 /* NewInTown */ = {
 			isa = PBXGroup;
 			children = (
+				3D24D00A216D2B83005E63B5 /* FirstScene */,
 				3DA6E5AA21694A1200F85A37 /* EntryViewController */,
 				3DA6E57C21693D8600F85A37 /* AppDelegate.swift */,
 				3DA6E58021693D8600F85A37 /* Main.storyboard */,
@@ -266,6 +295,7 @@
 			files = (
 				3DA6E58721693D8900F85A37 /* LaunchScreen.storyboard in Resources */,
 				3DA6E58421693D8900F85A37 /* Assets.xcassets in Resources */,
+				3D24D018216D2BF1005E63B5 /* FirstSceneViewController.xib in Resources */,
 				3DA6E58221693D8600F85A37 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,8 +375,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D24D011216D2BD7005E63B5 /* FirstSceneInteractor.swift in Sources */,
+				3D24D016216D2BD7005E63B5 /* FirstSceneWorker.swift in Sources */,
+				3D24D015216D2BD7005E63B5 /* FirstSceneViewController.swift in Sources */,
 				3DA6E57F21693D8600F85A37 /* EntryViewController.swift in Sources */,
+				3D24D014216D2BD7005E63B5 /* FirstSceneRouter.swift in Sources */,
 				3DA6E57D21693D8600F85A37 /* AppDelegate.swift in Sources */,
+				3D24D013216D2BD7005E63B5 /* FirstScenePresenter.swift in Sources */,
+				3D24D012216D2BD7005E63B5 /* FirstSceneModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
