@@ -50,7 +50,10 @@ class FirstSceneWorker {
         guard let storyline = getStoryLine(forId: storyLineId) else {
             return nil
         }
-        return storyline.dialogs[index]
+        if index < storyline.dialogs.count {
+            return storyline.dialogs[index]
+        }
+        return nil
     }
 
 }

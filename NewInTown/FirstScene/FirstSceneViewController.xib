@@ -13,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstSceneViewController" customModule="NewInTown" customModuleProvider="target">
             <connections>
                 <outlet property="answerTextField" destination="eha-ox-P6j" id="BJT-I0-KX8"/>
+                <outlet property="infoToastContentView" destination="eJF-dK-C79" id="6QR-hO-Bg5"/>
+                <outlet property="infoToastLabel" destination="n5g-PS-2fy" id="I0y-8Q-ZEI"/>
                 <outlet property="messageLabel" destination="ayC-yN-W7j" id="org-SS-F7A"/>
                 <outlet property="scoreCountLabel" destination="Ecx-Gu-NHQ" id="tY6-vo-fJY"/>
                 <outlet property="view" destination="iN0-l3-epB" id="uHt-iF-LLN"/>
@@ -61,14 +63,36 @@
                                 </textField>
                             </subviews>
                         </stackView>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJF-dK-C79">
+                            <rect key="frame" x="213.5" y="123.5" width="240" height="128"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oops! Try again!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5g-PS-2fy">
+                                    <rect key="frame" x="20" y="20" width="200" height="88"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="128" id="06M-1Q-fhM"/>
+                                <constraint firstAttribute="bottom" secondItem="n5g-PS-2fy" secondAttribute="bottom" constant="20" id="13n-kw-80q"/>
+                                <constraint firstItem="n5g-PS-2fy" firstAttribute="top" secondItem="eJF-dK-C79" secondAttribute="top" constant="20" id="BOO-Us-m4M"/>
+                                <constraint firstAttribute="trailing" secondItem="n5g-PS-2fy" secondAttribute="trailing" constant="20" id="JuQ-8y-otV"/>
+                                <constraint firstItem="n5g-PS-2fy" firstAttribute="leading" secondItem="eJF-dK-C79" secondAttribute="leading" constant="20" id="Vc9-JN-oq0"/>
+                                <constraint firstAttribute="width" constant="240" id="knC-yS-Gv8"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="8Yz-Xm-fFd" secondAttribute="trailing" constant="20" id="8qb-HI-9Wb"/>
                         <constraint firstItem="iRY-CM-IZ9" firstAttribute="top" secondItem="pLn-e3-cVB" secondAttribute="top" constant="20" id="9sc-do-vtF"/>
                         <constraint firstAttribute="bottom" secondItem="8Yz-Xm-fFd" secondAttribute="bottom" constant="220" id="IiM-PF-iYy"/>
+                        <constraint firstItem="eJF-dK-C79" firstAttribute="centerY" secondItem="pLn-e3-cVB" secondAttribute="centerY" id="fbL-oe-ESu"/>
                         <constraint firstItem="iRY-CM-IZ9" firstAttribute="leading" secondItem="pLn-e3-cVB" secondAttribute="leading" constant="20" id="heC-2f-Aib"/>
                         <constraint firstAttribute="trailing" secondItem="iRY-CM-IZ9" secondAttribute="trailing" constant="20" id="mlg-1H-hz1"/>
+                        <constraint firstItem="eJF-dK-C79" firstAttribute="centerX" secondItem="pLn-e3-cVB" secondAttribute="centerX" id="qvh-ZK-W13"/>
                         <constraint firstItem="8Yz-Xm-fFd" firstAttribute="leading" secondItem="pLn-e3-cVB" secondAttribute="leading" constant="20" id="rw2-tC-Jmg"/>
                         <constraint firstItem="8Yz-Xm-fFd" firstAttribute="top" secondItem="iRY-CM-IZ9" secondAttribute="bottom" constant="10" id="vNd-Xs-CBe"/>
                     </constraints>

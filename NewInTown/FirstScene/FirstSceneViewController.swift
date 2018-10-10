@@ -14,6 +14,8 @@ import UIKit
 
 protocol FirstSceneDisplayLogic: class {
     func displayFirstScene(viewModel: FirstScene.FetchFirstScene.ViewModel)
+    func displayFailure(withMessage message:String)
+    func displaySuccess(withMessage message:String)
 }
 
 class FirstSceneViewController: UIViewController, FirstSceneDisplayLogic, UITextFieldDelegate {
@@ -22,6 +24,9 @@ class FirstSceneViewController: UIViewController, FirstSceneDisplayLogic, UIText
     var router: (NSObjectProtocol & FirstSceneRoutingLogic & FirstSceneDataPassing)?
     
     // MARK: Views
+    
+    @IBOutlet weak var infoToastContentView: UIView!
+    @IBOutlet weak var infoToastLabel: UILabel!
     
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var answerTextField: UITextField! {
@@ -104,6 +109,33 @@ class FirstSceneViewController: UIViewController, FirstSceneDisplayLogic, UIText
         scoreCountLabel.text = viewModel.scoreString
         messageLabel.text = viewModel.nextQuestion
         answerTextField.text = ""
+    }
+    
+    private func displayInfoToast(withMessage message:String, completion: ((Bool) -> Swift.Void)? = nil) {
+        infoToastLabel.text = message
+        infoToastContentView.isHidden = false
+        UIView.animateKeyframes(withDuration: 2, delay: 0, options: .beginFromCurrentState, animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.3) {
+                self.infoToastContentView.alpha = 1
+            }
+            UIView.addKeyframe(withRelativeStartTime: 0.7, relativeDuration: 0.3) {
+                self.infoToastContentView.alpha = 0
+            }
+            
+        }) { (flag) in
+            self.infoToastContentView.isHidden = true
+        }
+
+    }
+    
+    func displayFailure(withMessage message:String) {
+        displayInfoToast(withMessage: message) { (flag) in
+            self.answerTextField.becomeFirstResponder()
+        }
+    }
+    
+    func displaySuccess(withMessage message:String) {
+        displayInfoToast(withMessage: message)
     }
     
     // MARK: - UITextFieldDelegate

@@ -31,6 +31,11 @@ class FirstScenePresenter: FirstScenePresentationLogic {
         }
         viewModel.scoreString = String(response.score)
         viewModel.nextQuestion = dialog.question.english
+        if response.hasCorrectAnswer {
+            viewController?.displaySuccess(withMessage: "Great - Going to the next!")
+        } else {
+            viewController?.displayFailure(withMessage: "Ooops! Try again!")
+        }
         viewController?.displayFirstScene(viewModel: viewModel)
     }
 }
