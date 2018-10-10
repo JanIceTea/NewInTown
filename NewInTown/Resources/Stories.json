@@ -10,7 +10,12 @@
                     "id": "B3045_1",
                     "dialogs": [
                         {
-                            "question": "When we needed to get the attention of the waitress – what did we call her?",
+                            "question":
+                            {
+                                "pinyin": "",
+                                "chinese": "",
+                                "english": "When we needed to get the attention of the waitress – what did we call her?"
+                            },
                             "answer": {
                                 "pinyin": "fu2wu4yuan2",
                                 "chinese": "服务员"
@@ -19,7 +24,11 @@
                             "id": "B3045_1_1"
                         },
                         {
-                            "question": "I would like to have known what their specialty dish was.  How do we say ‘specialty dish’?",
+                            "question":{
+                                "pinyin": "",
+                                "chinese": "",
+                                "english": "I would like to have known what their specialty dish was.  How do we say ‘specialty dish’?"
+                            },
                             "answer": {
                                 "pinyin": "zhao1pai cai4",
                                 "chinese": "招牌菜"

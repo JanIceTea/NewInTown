@@ -30,7 +30,7 @@ class FirstScenePresenter: FirstScenePresentationLogic {
             return
         }
         viewModel.scoreString = String(response.score)
-        viewModel.nextQuestion = dialog.question
+        viewModel.nextQuestion = dialog.question.english
         viewController?.displayFirstScene(viewModel: viewModel)
     }
 }

@@ -13,8 +13,14 @@ struct Answer: Codable {
     var chinese: String
 }
 
+struct Question: Codable {
+    var pinyin: String
+    var chinese: String
+    var english: String
+}
+
 struct Dialog: Codable {
-    var question: String
+    var question: Question
     var answer: Answer
     var points: Int
     var id: String
