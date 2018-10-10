@@ -14,6 +14,9 @@
 		3D24D015216D2BD7005E63B5 /* FirstSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D24D00F216D2BD7005E63B5 /* FirstSceneViewController.swift */; };
 		3D24D016216D2BD7005E63B5 /* FirstSceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D24D010216D2BD7005E63B5 /* FirstSceneWorker.swift */; };
 		3D24D018216D2BF1005E63B5 /* FirstSceneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D24D017216D2BF1005E63B5 /* FirstSceneViewController.xib */; };
+		3D445701216E37C30003F4B1 /* Stories.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D445700216E37C30003F4B1 /* Stories.json */; };
+		3D445703216E3AEA0003F4B1 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D445702216E3AEA0003F4B1 /* DataModels.swift */; };
+		3D445705216E9C540003F4B1 /* FirstSceneWorkerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D445704216E9C540003F4B1 /* FirstSceneWorkerTest.swift */; };
 		3DA6E57D21693D8600F85A37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6E57C21693D8600F85A37 /* AppDelegate.swift */; };
 		3DA6E57F21693D8600F85A37 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6E57E21693D8600F85A37 /* EntryViewController.swift */; };
 		3DA6E58221693D8600F85A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DA6E58021693D8600F85A37 /* Main.storyboard */; };
@@ -49,6 +52,9 @@
 		3D24D00F216D2BD7005E63B5 /* FirstSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSceneViewController.swift; sourceTree = "<group>"; };
 		3D24D010216D2BD7005E63B5 /* FirstSceneWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSceneWorker.swift; sourceTree = "<group>"; };
 		3D24D017216D2BF1005E63B5 /* FirstSceneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstSceneViewController.xib; sourceTree = "<group>"; };
+		3D445700216E37C30003F4B1 /* Stories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stories.json; sourceTree = "<group>"; };
+		3D445702216E3AEA0003F4B1 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
+		3D445704216E9C540003F4B1 /* FirstSceneWorkerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSceneWorkerTest.swift; sourceTree = "<group>"; };
 		3DA6E57921693D8600F85A37 /* NewInTown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewInTown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DA6E57C21693D8600F85A37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DA6E57E21693D8600F85A37 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
@@ -102,14 +108,26 @@
 				3D24D00E216D2BD7005E63B5 /* FirstSceneRouter.swift */,
 				3D24D00F216D2BD7005E63B5 /* FirstSceneViewController.swift */,
 				3D24D010216D2BD7005E63B5 /* FirstSceneWorker.swift */,
+				3D445704216E9C540003F4B1 /* FirstSceneWorkerTest.swift */,
 				3D24D017216D2BF1005E63B5 /* FirstSceneViewController.xib */,
+				3D445702216E3AEA0003F4B1 /* DataModels.swift */,
 			);
 			path = FirstScene;
+			sourceTree = "<group>";
+		};
+		3D4456FF216E37860003F4B1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3D445700216E37C30003F4B1 /* Stories.json */,
+			);
+			name = Resources;
+			path = NewInTown/Resources;
 			sourceTree = "<group>";
 		};
 		3DA6E57021693D8600F85A37 = {
 			isa = PBXGroup;
 			children = (
+				3D4456FF216E37860003F4B1 /* Resources */,
 				3DA6E57B21693D8600F85A37 /* NewInTown */,
 				3DA6E59021693D8900F85A37 /* NewInTownTests */,
 				3DA6E59B21693D8900F85A37 /* NewInTownUITests */,
@@ -297,6 +315,7 @@
 				3DA6E58421693D8900F85A37 /* Assets.xcassets in Resources */,
 				3D24D018216D2BF1005E63B5 /* FirstSceneViewController.xib in Resources */,
 				3DA6E58221693D8600F85A37 /* Main.storyboard in Resources */,
+				3D445701216E37C30003F4B1 /* Stories.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D445703216E3AEA0003F4B1 /* DataModels.swift in Sources */,
 				3D24D011216D2BD7005E63B5 /* FirstSceneInteractor.swift in Sources */,
 				3D24D016216D2BD7005E63B5 /* FirstSceneWorker.swift in Sources */,
 				3D24D015216D2BD7005E63B5 /* FirstSceneViewController.swift in Sources */,
@@ -391,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DA6E59221693D8900F85A37 /* NewInTownTests.swift in Sources */,
+				3D445705216E9C540003F4B1 /* FirstSceneWorkerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

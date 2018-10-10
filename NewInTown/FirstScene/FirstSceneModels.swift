@@ -12,17 +12,6 @@
 
 import UIKit
 
-//todo nested ids?
-enum AnswerId {
-    case chapter01Scence01Answer01
-    case chapter01Scence01Answer02
-    
-    static var all: [AnswerId] {
-        return [.chapter01Scence01Answer01, chapter01Scence01Answer02]
-    }
-}
-
-
 enum FirstScene {
     
     // MARK: Use cases
@@ -36,7 +25,8 @@ enum FirstScene {
         struct Response {
             var hasCorrectAnswer: Bool = false
             var score: Int = 0
-            var nextId: AnswerId = .chapter01Scence01Answer01
+            var nextIndex: Int = 0
+            var storyLineId: String = ""
         }
         
         struct ViewModel {

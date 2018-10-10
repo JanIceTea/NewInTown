@@ -14,32 +14,43 @@ import UIKit
 
 class FirstSceneWorker {
     
-    func getAnswer(forId id: AnswerId) -> String {
-        switch id {
-        case .chapter01Scence01Answer01:
-            return "shi2"
-        case .chapter01Scence01Answer02:
-            return "ba1"
+    static var storyCollection: StoryCollection?
+    
+    func readJson() {
+        guard let url = Bundle.main.url(forResource: "Stories", withExtension: "json") else {
+            print("Missing stories file ...")
+            return
+        }
+
+        do {
+            let decoder = JSONDecoder()
+            let data = try Data(contentsOf: url)
+            let stories = try decoder.decode(StoryCollection.self, from: data)
+            FirstSceneWorker.storyCollection = stories
+        } catch {
+            print("Reading stories failed ...")
         }
     }
     
-    func getQuestion(forId id: AnswerId) -> String {
-        switch id {
-        case .chapter01Scence01Answer01:
-            return "How many dumplings would you like? Remember you usually eat 2 yourself and your friends asked you to bring 8. Write the answer in pinyin! (write with tones like yi1 (for one -)"
-        case .chapter01Scence01Answer02:
-            return "Oh, sorry it's late and we only have 8 left. So how many do you want?"
+    func getStoryLine(forId id: String) -> StoryLine? {
+        guard let storyCollection = FirstSceneWorker.storyCollection else {
+            return nil
         }
+        for story in storyCollection.stories {
+            for storyline in story.storylines {
+                if storyline.id == id {
+                    return storyline
+                }
+            }
+        }
+        return nil
     }
     
-    func getNextQuestionId(forId id: AnswerId) -> AnswerId {
-        guard let currentIndex = AnswerId.all.firstIndex(of: id) else {
-            return id
+    func getDialog(forStoryLineId storyLineId: String, atIndex index: Int) -> Dialog? {
+        guard let storyline = getStoryLine(forId: storyLineId) else {
+            return nil
         }
-        let nextIndex = currentIndex + 1
-        if nextIndex < AnswerId.all.count {
-            return AnswerId.all[nextIndex]
-        }
-        return id
+        return storyline.dialogs[index]
     }
+
 }

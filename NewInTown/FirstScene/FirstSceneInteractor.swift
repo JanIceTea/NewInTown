@@ -14,6 +14,7 @@ import UIKit
 
 protocol FirstSceneBusinessLogic {
     func validate(answer: String)
+    func fetchStoryLine(withId id: String)
 }
 
 protocol FirstSceneDataStore {
@@ -24,23 +25,38 @@ class FirstSceneInteractor: FirstSceneBusinessLogic, FirstSceneDataStore {
     
     var presenter: FirstScenePresentationLogic?
     var currentScore: Int = 0
-    var currentAnswerId: AnswerId = .chapter01Scence01Answer01
-
+    var currentStoryLineId: String = "B3045_1"
+    var currentDialogIndex: Int = 0
+    
     let worker = FirstSceneWorker()
+    
+    func fetchStoryLine(withId id: String) {
+        var response = FirstScene.FetchFirstScene.Response()
+        currentStoryLineId = id
+        response.storyLineId = currentStoryLineId
+        response.score = currentScore
+        response.nextIndex = currentDialogIndex
+        presenter?.updateFirstScene(response: response)
+    }
     
     // MARK: Perform operation on FirstScene
 
     func validate(answer: String) {
         var response = FirstScene.FetchFirstScene.Response()
-        response.hasCorrectAnswer = worker.getAnswer(forId: currentAnswerId) == answer
+        guard let dialog = worker.getDialog(forStoryLineId: currentStoryLineId, atIndex: currentDialogIndex) else {
+            return
+        }
+        response.hasCorrectAnswer = (answer == dialog.answer.pinyin) || (answer == dialog.answer.chinese)
         if response.hasCorrectAnswer {
-            currentScore = currentScore + 10
-            currentAnswerId = worker.getNextQuestionId(forId: currentAnswerId)
+            currentScore = currentScore + dialog.points
+            currentDialogIndex = currentDialogIndex + 1
         } else {
             currentScore = currentScore - 5
         }
+
         response.score = currentScore
-        response.nextId = currentAnswerId
+        response.nextIndex = currentDialogIndex
+        response.storyLineId = currentStoryLineId
         presenter?.updateFirstScene(response: response)
     }
 

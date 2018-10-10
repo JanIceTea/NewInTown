@@ -26,8 +26,11 @@ class FirstScenePresenter: FirstScenePresentationLogic {
     func updateFirstScene(response: FirstScene.FetchFirstScene.Response) {
     
         var viewModel = FirstScene.FetchFirstScene.ViewModel()
+        guard let dialog = worker.getDialog(forStoryLineId: response.storyLineId, atIndex: response.nextIndex) else {
+            return
+        }
         viewModel.scoreString = String(response.score)
-        viewModel.nextQuestion = worker.getQuestion(forId: response.nextId)
+        viewModel.nextQuestion = dialog.question
         viewController?.displayFirstScene(viewModel: viewModel)
     }
 }

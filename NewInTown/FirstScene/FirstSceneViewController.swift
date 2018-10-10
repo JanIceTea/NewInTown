@@ -60,6 +60,7 @@ class FirstSceneViewController: UIViewController, FirstSceneDisplayLogic, UIText
         super.viewDidLoad()
         setupUI()
         setupAccessibilityIdentifers()
+        performStoryLineRequest()
     }
     
     // MARK: Setup
@@ -86,6 +87,11 @@ class FirstSceneViewController: UIViewController, FirstSceneDisplayLogic, UIText
     }
     
     // MARK: Perform an initial request
+    
+    func performStoryLineRequest() {
+        let storylineId = "B3045_1"
+        interactor?.fetchStoryLine(withId: storylineId)
+    }
     
     func performRequest() {
         guard let text = answerTextField.text else {

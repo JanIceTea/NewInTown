@@ -1,0 +1,36 @@
+{
+    "stories": [
+        {
+            "name": "Rude Waitress story- Part 1",
+            "id": "B3045",
+            "level": "Elementary",
+            "storylines": [
+                {
+                    "time": 240,
+                    "id": "B3045_1",
+                    "dialogs": [
+                        {
+                            "question": "When we needed to get the attention of the waitress – what did we call her?",
+                            "answer": {
+                                "pinyin": "fu2wu4yuan2",
+                                "chinese": "服务员"
+                            },
+                            "points": 10,
+                            "id": "B3045_1_1"
+                        },
+                        {
+                            "question": "I would like to have known what their specialty dish was.  How do we say ‘specialty dish’?",
+                            "answer": {
+                                "pinyin": "zhao1pai cai4",
+                                "chinese": "招牌菜"
+                            },
+                            "points": 10,
+                            "id": "B3045_1_2"
+
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
