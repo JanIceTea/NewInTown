@@ -94,8 +94,7 @@ class FirstSceneViewController: UIViewController, FirstSceneDisplayLogic, UIText
     // MARK: Perform an initial request
     
     func performStoryLineRequest() {
-        let storylineId = "B3045_1"
-        interactor?.fetchStoryLine(withId: storylineId)
+        interactor?.restoreFromGameState()
     }
     
     func performRequest() {

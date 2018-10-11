@@ -15,6 +15,7 @@ import UIKit
 protocol FirstSceneBusinessLogic {
     func validate(answer: String)
     func fetchStoryLine(withId id: String)
+    func restoreFromGameState()
 }
 
 protocol FirstSceneDataStore {
@@ -57,6 +58,23 @@ class FirstSceneInteractor: FirstSceneBusinessLogic, FirstSceneDataStore {
         response.score = currentScore
         response.nextIndex = currentDialogIndex
         response.storyLineId = currentStoryLineId
+        presenter?.updateFirstScene(response: response)
+        updateGameData()
+    }
+    
+    private func updateGameData() {
+        StateKeeper.shared.setGameState(points: currentScore, storyLineId: currentStoryLineId, dialogIndex: currentDialogIndex)
+    }
+    
+    func restoreFromGameState() {
+        currentStoryLineId = StateKeeper.shared.gameState.currentStoryLineId
+        currentScore = StateKeeper.shared.gameState.points
+        currentDialogIndex = StateKeeper.shared.gameState.currentDialogIndex
+        
+        var response = FirstScene.FetchFirstScene.Response()
+        response.storyLineId = currentStoryLineId
+        response.score = currentScore
+        response.nextIndex = currentDialogIndex
         presenter?.updateFirstScene(response: response)
     }
 
