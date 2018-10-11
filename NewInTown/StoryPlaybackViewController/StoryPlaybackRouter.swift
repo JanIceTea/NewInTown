@@ -32,6 +32,8 @@ class StoryPlaybackRouter: NSObject, StoryPlaybackRoutingLogic, StoryPlaybackDat
 //            var destinationDS = destinationVC.router!.dataStore!
 //            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
         StateKeeper.shared.setDidSeeDialog()
+        //todo
+//        StateKeeper.shared.setGameState(points: 0, storyLineId: "B3045_1", dialogIndex: 0, timeToWait: 220)
             navigateToSomewhere(source: viewController!, destination: destinationVC)
     }
 

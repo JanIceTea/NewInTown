@@ -38,6 +38,7 @@ class FirstSceneInteractor: FirstSceneBusinessLogic, FirstSceneDataStore {
         response.storyLineId = currentStoryLineId
         response.score = currentScore
         response.nextIndex = currentDialogIndex
+        
         presenter?.updateFirstScene(response: response)
     }
     
