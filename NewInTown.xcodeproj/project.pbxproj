@@ -20,6 +20,7 @@
 		3D445701216E37C30003F4B1 /* Stories.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D445700216E37C30003F4B1 /* Stories.json */; };
 		3D445703216E3AEA0003F4B1 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D445702216E3AEA0003F4B1 /* DataModels.swift */; };
 		3D445705216E9C540003F4B1 /* FirstSceneWorkerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D445704216E9C540003F4B1 /* FirstSceneWorkerTest.swift */; };
+		3D7D273C216FD4A5002A333D /* chinesepod_B3045dg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D273B216FD4A5002A333D /* chinesepod_B3045dg.mp3 */; };
 		3DA6E57D21693D8600F85A37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6E57C21693D8600F85A37 /* AppDelegate.swift */; };
 		3DA6E57F21693D8600F85A37 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6E57E21693D8600F85A37 /* EntryViewController.swift */; };
 		3DA6E58221693D8600F85A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DA6E58021693D8600F85A37 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		3D445700216E37C30003F4B1 /* Stories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stories.json; sourceTree = "<group>"; };
 		3D445702216E3AEA0003F4B1 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 		3D445704216E9C540003F4B1 /* FirstSceneWorkerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSceneWorkerTest.swift; sourceTree = "<group>"; };
+		3D7D273B216FD4A5002A333D /* chinesepod_B3045dg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chinesepod_B3045dg.mp3; sourceTree = "<group>"; };
 		3DA6E57921693D8600F85A37 /* NewInTown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewInTown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DA6E57C21693D8600F85A37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DA6E57E21693D8600F85A37 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		3D4456FF216E37860003F4B1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3D7D273B216FD4A5002A333D /* chinesepod_B3045dg.mp3 */,
 				3D445700216E37C30003F4B1 /* Stories.json */,
 			);
 			name = Resources;
@@ -323,6 +326,7 @@
 				3DA6E58421693D8900F85A37 /* Assets.xcassets in Resources */,
 				3D24D018216D2BF1005E63B5 /* FirstSceneViewController.xib in Resources */,
 				3DA6E58221693D8600F85A37 /* Main.storyboard in Resources */,
+				3D7D273C216FD4A5002A333D /* chinesepod_B3045dg.mp3 in Resources */,
 				3D445701216E37C30003F4B1 /* Stories.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

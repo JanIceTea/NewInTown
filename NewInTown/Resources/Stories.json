@@ -1,65 +1,151 @@
 {
-    "stories": [
-        {
-            "name": "Rude Waitress story- Part 1",
-            "id": "B3045",
-            "level": "Elementary",
-            "storylines": [
-                {
-                    "time": 0,
-                    "id": "B3045_1",
-                    "dialogs": [
-                        {
-                            "question":
-                            {
-                                "pinyin": "",
-                                "chinese": "",
-                                "english": "When we needed to get the attention of the waitress – what did we call her?"
-                            },
-                            "answer": {
-                                "pinyin": "fu2wu4yuan2",
-                                "chinese": "服务员"
-                            },
-                            "points": 10,
-                            "id": "B3045_1_1"
-                        }
-                    ]
-                },
-               {
-               "time": 240,
-               "id": "B3045_2",
-               "dialogs": [
-                           {
-                           "question":
-                           {
-                           "pinyin": "",
-                           "chinese": "",
-                           "english": "2 - When we needed to get the attention of the waitress – what did we call her?"
-                           },
-                           "answer": {
-                           "pinyin": "fu2wu4yuan2",
-                           "chinese": "服务员"
-                           },
-                           "points": 10,
-                           "id": "B3045_1_1"
-                           },
-                           {
-                           "question":{
-                           "pinyin": "",
-                           "chinese": "",
-                           "english": "I would like to have known what their specialty dish was.  How do we say ‘specialty dish’?"
-                           },
-                           "answer": {
-                           "pinyin": "zhao1pai cai4",
-                           "chinese": "招牌菜"
-                           },
-                           "points": 10,
-                           "id": "B3045_1_2"
-                           
-                           }
-                           ]
-               }
-            ]
-        }
-    ]
+    "stories": [{
+                "name": "Rude Waitress story- Part 1",
+                "id": "B3045",
+                "level": "Elementary",
+                "audioFileName": "chinesepod_B3045dg",
+                "audioFileExtension": "mp3",
+                "storylines": [{
+                               "time": 0,
+                               "id": "B3045_1",
+                               "dialogs": [{
+                                           "question": {
+                                           "pinyin": "",
+                                           "chinese": "",
+                                           "english": "When we needed to get the attention of the waitress – what did we call her?"
+                                           },
+                                           "answer": {
+                                           "pinyin": "fu2wu4yuan2",
+                                           "chinese": "服务员"
+                                           },
+                                           "points": 10,
+                                           "id": "B3045_1_1"
+                                           }]
+                               },
+                               {
+                               "time": 240,
+                               "id": "B3045_2",
+                               "dialogs": [{
+                                           "question": {
+                                           "pinyin": "",
+                                           "chinese": "",
+                                           "english": "I was not surprised that the specialty dish would be relatively expensive.  What phrase did she use to describe it as relatively expensive?"
+                                           },
+                                           "answer": {
+                                           "pinyin": "bi3jiao4 gui4",
+                                           "chinese": "比较贵"
+                                           },
+                                           "points": 10,
+                                           "id": "B3045_2_1"
+                                           },
+                                           {
+                                           "question": {
+                                           "pinyin": "",
+                                           "chinese": "",
+                                           "english": "How would I say ‘relatively inexpensive?’"
+                                           },
+                                           "answer": {
+                                           "pinyin": "bi3jiao4 pian2yi",
+                                           "chinese": "比较便宜"
+                                           },
+                                           "points": 10,
+                                           "id": "B3045_2_2"
+                                           
+                                           },
+                                           {
+                                           "question": {
+                                           "pinyin": "",
+                                           "chinese": "",
+                                           "english": "I am glad we decided to leave that place.  What phrase was used to say ‘forget it!’?"
+                                           },
+                                           "answer": {
+                                           "pinyin": "suan4le suan4le!",
+                                           "chinese": "算了算了!"
+                                           },
+                                           "points": 10,
+                                           "id": "B3045_2_3"
+                                           
+                                           }
+                                           ]
+                               },
+                               {
+                               "time": 240,
+                               "id": "B3045_3",
+                               "dialogs": [{
+                                           "question": {
+                                           "pinyin": "",
+                                           "chinese": "",
+                                           "english": "How phrase did the waitress use inviting you to try the dish?"
+                                           },
+                                           "answer": {
+                                           "pinyin": "ni3chi1chi1kan4",
+                                           "chinese": "你吃吃看"
+                                           },
+                                           "points": 10,
+                                           "id": "B3045_3_1"
+                                           },
+                                           {
+                                           "question": {
+                                           "pinyin": "",
+                                           "chinese": "",
+                                           "english": "We decided to try the place across the road.  What word indicated ‘on the opposite side’?"
+                                           },
+                                           "answer": {
+                                           "pinyin": "dui4mian4",
+                                           "chinese": "对面"
+                                           },
+                                           "points": 10,
+                                           "id": "B3045_3_2"
+                                           
+                                           },
+                                           {
+                                           "question": {
+                                           "pinyin": "",
+                                           "chinese": "",
+                                           "english": "The place across the way has dumplings.  How do we say ‘dumplings’?"
+                                           },
+                                           "answer": {
+                                           "pinyin": "bao1zi",
+                                           "chinese": "包子"
+                                           },
+                                           "points": 10,
+                                           "id": "B3045_3_3"
+                                           
+                                           }
+                                           ]
+                               },
+                               {
+                               "time": 240,
+                               "id": "B3045_4",
+                               "dialogs": [{
+                                           "question": {
+                                           "pinyin": "",
+                                           "chinese": "",
+                                           "english": "If you eat the dish you will know whether it is hot or not.  How do we say ‘you will know’?"
+                                           },
+                                           "answer": {
+                                           "pinyin": "ni3zhi1dao4le",
+                                           "chinese": "你知道了"
+                                           },
+                                           "points": 10,
+                                           "id": "B3045_4_1"
+                                           },
+                                           {
+                                           "question": {
+                                           "pinyin": "",
+                                           "chinese": "",
+                                           "english": " She certainly said ‘take care’ in a sarcastic tone.  How did she say ‘take care’?"
+                                           },
+                                           "answer": {
+                                           "pinyin": "man4zou3",
+                                           "chinese": "慢走"
+                                           },
+                                           "points": 10,
+                                           "id": "B3045_4_2"
+                                           
+                                           }
+                                           ]
+                               }
+                               ]
+                }]
 }
