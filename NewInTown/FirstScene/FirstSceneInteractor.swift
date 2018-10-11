@@ -74,6 +74,10 @@ class FirstSceneInteractor: FirstSceneBusinessLogic, FirstSceneDataStore {
         
         presenter?.updateFirstScene(response: response)
         updateGameData()
+        
+        if(response.isBlockedForNext) {
+            runCountdownQueue()
+        }
     }
     
     private func updateGameData() {
@@ -92,7 +96,33 @@ class FirstSceneInteractor: FirstSceneBusinessLogic, FirstSceneDataStore {
         response.nextIndex = currentDialogIndex
         response.timeToWaitString = String(nextWaitTime)
         response.isBlockedForNext = nextWaitTime > 0
+        
         presenter?.updateFirstScene(response: response)
+        
+        if(response.isBlockedForNext) {
+            runCountdownQueue()
+        }
+    }
+
+    private let countDownQueue: DispatchQueue = DispatchQueue(label: "com.teatracks.newInTown.CountDown")
+    
+    func countDownTime() {
+        if StateKeeper.shared.timeToWaitForNextSoryLine > 0 {
+            countDownQueue.asyncAfter(deadline: .now() + 1) {[weak self] in
+                DispatchQueue.main.async {
+                    self?.presenter?.updateWaitingTime(withString: String(Int(StateKeeper.shared.timeToWaitForNextSoryLine.rounded())))
+                }
+                self?.countDownTime()
+            }
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+                self.restoreFromGameState()
+            }
+        }
+    }
+    
+    func runCountdownQueue() {
+        countDownTime()
     }
 
 }

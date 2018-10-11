@@ -23,13 +23,16 @@ class StateKeeper {
     private(set) var gameState = GameState(points: 0, currentStoryLineId: "B3045_1", currentDialogIndex:0, timeToWait: 0, date: Date())
     private let documentName: String = "gamestate.json"
     
-    var timeToWaitForNextSoryLine: TimeInterval
-    {
-        let waitTime = Date().timeIntervalSince(gameState.date)
+    var timeToWaitForNextSoryLine: TimeInterval {
+        return timeToWaitForNextSoryLine(for: Date())
+    }
+    
+    func timeToWaitForNextSoryLine(for date: Date) -> TimeInterval {
+        let waitTime = date.timeIntervalSince(gameState.date)
         if gameState.timeToWait == 0 {
             return gameState.timeToWait
         }
-        return waitTime - gameState.timeToWait
+        return  gameState.timeToWait - waitTime
     }
     
     func canStartStoryLine(storyLineId: String) -> Bool {
@@ -42,6 +45,8 @@ class StateKeeper {
         gameState.currentStoryLineId = storyLineId
         gameState.currentDialogIndex = dialogIndex
         gameState.date = Date()
+        gameState.timeToWait = timeToWait
+        writeSettings()
     }
     
     func writeSettings() {

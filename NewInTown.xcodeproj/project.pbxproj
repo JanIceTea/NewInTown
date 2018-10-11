@@ -15,6 +15,8 @@
 		3D24D016216D2BD7005E63B5 /* FirstSceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D24D010216D2BD7005E63B5 /* FirstSceneWorker.swift */; };
 		3D24D018216D2BF1005E63B5 /* FirstSceneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D24D017216D2BF1005E63B5 /* FirstSceneViewController.xib */; };
 		3D319AD2216EA4D600179E99 /* StateKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D319AD1216EA4D600179E99 /* StateKeeper.swift */; };
+		3D3CE4E5216FA06D00E4AEC3 /* FirstSceneInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3CE4E4216FA06D00E4AEC3 /* FirstSceneInteractorTest.swift */; };
+		3D3CE4E6216FA2F200E4AEC3 /* Stories.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D445700216E37C30003F4B1 /* Stories.json */; };
 		3D445701216E37C30003F4B1 /* Stories.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D445700216E37C30003F4B1 /* Stories.json */; };
 		3D445703216E3AEA0003F4B1 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D445702216E3AEA0003F4B1 /* DataModels.swift */; };
 		3D445705216E9C540003F4B1 /* FirstSceneWorkerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D445704216E9C540003F4B1 /* FirstSceneWorkerTest.swift */; };
@@ -54,6 +56,7 @@
 		3D24D010216D2BD7005E63B5 /* FirstSceneWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSceneWorker.swift; sourceTree = "<group>"; };
 		3D24D017216D2BF1005E63B5 /* FirstSceneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstSceneViewController.xib; sourceTree = "<group>"; };
 		3D319AD1216EA4D600179E99 /* StateKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateKeeper.swift; sourceTree = "<group>"; };
+		3D3CE4E4216FA06D00E4AEC3 /* FirstSceneInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSceneInteractorTest.swift; sourceTree = "<group>"; };
 		3D445700216E37C30003F4B1 /* Stories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stories.json; sourceTree = "<group>"; };
 		3D445702216E3AEA0003F4B1 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 		3D445704216E9C540003F4B1 /* FirstSceneWorkerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSceneWorkerTest.swift; sourceTree = "<group>"; };
@@ -105,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				3D24D00B216D2BD7005E63B5 /* FirstSceneInteractor.swift */,
+				3D3CE4E4216FA06D00E4AEC3 /* FirstSceneInteractorTest.swift */,
 				3D24D00C216D2BD7005E63B5 /* FirstSceneModels.swift */,
 				3D24D00D216D2BD7005E63B5 /* FirstScenePresenter.swift */,
 				3D24D00E216D2BD7005E63B5 /* FirstSceneRouter.swift */,
@@ -134,7 +138,6 @@
 				3DA6E59021693D8900F85A37 /* NewInTownTests */,
 				3DA6E59B21693D8900F85A37 /* NewInTownUITests */,
 				3DA6E57A21693D8600F85A37 /* Products */,
-				F980F78F584A78E7B94159B8 /* Pods */,
 				457F4295575B4D4854BDEA61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				3DA6E57C21693D8600F85A37 /* AppDelegate.swift */,
 				3DA6E58021693D8600F85A37 /* Main.storyboard */,
 				3DA6E58321693D8900F85A37 /* Assets.xcassets */,
+				F980F78F584A78E7B94159B8 /* Pods */,
 				3DA6E58521693D8900F85A37 /* LaunchScreen.storyboard */,
 				3DA6E58821693D8900F85A37 /* Info.plist */,
 				3D319AD1216EA4D600179E99 /* StateKeeper.swift */,
@@ -205,6 +209,7 @@
 				8917A2FA69860CB0B85D3EEF /* Pods-NewInTown.release.xcconfig */,
 			);
 			name = Pods;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D3CE4E6216FA2F200E4AEC3 /* Stories.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D3CE4E5216FA06D00E4AEC3 /* FirstSceneInteractorTest.swift in Sources */,
 				3DA6E59221693D8900F85A37 /* NewInTownTests.swift in Sources */,
 				3D445705216E9C540003F4B1 /* FirstSceneWorkerTest.swift in Sources */,
 			);

@@ -17,6 +17,8 @@ protocol FirstSceneDisplayLogic: class {
     func displayFailure(withMessage message: String)
     func displaySuccess(withMessage message: String)
     func displayWaiting(withTimeString timeString: String)
+    func displayScore(withString scoreString: String)
+
 }
 
 class FirstSceneViewController: UIViewController, FirstSceneDisplayLogic, UITextFieldDelegate {
@@ -25,6 +27,7 @@ class FirstSceneViewController: UIViewController, FirstSceneDisplayLogic, UIText
     var router: (NSObjectProtocol & FirstSceneRoutingLogic & FirstSceneDataPassing)?
     
     // MARK: Views
+    @IBOutlet weak var dialogContentView: UIView!
     
     @IBOutlet weak var infoToastContentView: UIView!
     @IBOutlet weak var infoToastLabel: UILabel!
@@ -110,6 +113,9 @@ class FirstSceneViewController: UIViewController, FirstSceneDisplayLogic, UIText
         scoreCountLabel.text = viewModel.scoreString
         messageLabel.text = viewModel.nextQuestion
         answerTextField.text = ""
+        dialogContentView.isHidden = false
+        timeLeftLabel.isHidden = true
+        infoToastContentView.isHidden = true
     }
     
     private func displayInfoToast(withMessage message:String, completion: ((Bool) -> Swift.Void)? = nil) {
@@ -141,6 +147,12 @@ class FirstSceneViewController: UIViewController, FirstSceneDisplayLogic, UIText
     
     func displayWaiting(withTimeString timeString: String) {
         timeLeftLabel.text = timeString
+        timeLeftLabel.isHidden = false
+        dialogContentView.isHidden = true
+    }
+    
+    func displayScore(withString scoreString: String) {
+        scoreCountLabel.text = scoreString
     }
     
     // MARK: - UITextFieldDelegate

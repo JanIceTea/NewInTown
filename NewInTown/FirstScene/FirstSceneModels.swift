@@ -29,6 +29,8 @@ enum FirstScene {
             var storyLineId: String = ""
             var isBlockedForNext: Bool = false
             var timeToWaitString: String = ""
+            var remainingTimeToWaitString: String = ""
+
         }
         
         struct ViewModel {

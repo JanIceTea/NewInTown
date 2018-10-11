@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstSceneViewController" customModule="NewInTown" customModuleProvider="target">
             <connections>
                 <outlet property="answerTextField" destination="eha-ox-P6j" id="BJT-I0-KX8"/>
+                <outlet property="dialogContentView" destination="8Yz-Xm-fFd" id="yTa-fd-QDa"/>
                 <outlet property="infoToastContentView" destination="eJF-dK-C79" id="6QR-hO-Bg5"/>
                 <outlet property="infoToastLabel" destination="n5g-PS-2fy" id="I0y-8Q-ZEI"/>
                 <outlet property="messageLabel" destination="ayC-yN-W7j" id="org-SS-F7A"/>

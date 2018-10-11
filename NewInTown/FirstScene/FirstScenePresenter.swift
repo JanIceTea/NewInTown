@@ -14,6 +14,7 @@ import UIKit
 
 protocol FirstScenePresentationLogic {
     func updateFirstScene(response: FirstScene.FetchFirstScene.Response)
+    func updateWaitingTime(withString timeString: String)
 }
 
 class FirstScenePresenter: FirstScenePresentationLogic {
@@ -36,6 +37,7 @@ class FirstScenePresenter: FirstScenePresentationLogic {
         
         if response.isBlockedForNext {
             viewController?.displayWaiting(withTimeString: viewModel.timeToWaitString)
+            viewController?.displayScore(withString: viewModel.scoreString)
         } else {
             if response.hasCorrectAnswer {
                 viewController?.displaySuccess(withMessage: "Great - Going to the next!")
@@ -44,5 +46,9 @@ class FirstScenePresenter: FirstScenePresentationLogic {
             }
             viewController?.displayFirstScene(viewModel: viewModel)
         }
+    }
+    
+    func updateWaitingTime(withString timeString: String) {
+        viewController?.displayWaiting(withTimeString: timeString)
     }
 }
