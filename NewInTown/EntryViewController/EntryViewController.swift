@@ -24,5 +24,8 @@ class EntryViewController: UIViewController {
         present(firstScene, animated: true, completion: nil)
     }
 
+    @IBAction func didPressResetButton(_ sender: Any) {
+        StateKeeper.shared.reset()
+    }
 }
 

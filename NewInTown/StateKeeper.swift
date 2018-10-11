@@ -27,6 +27,10 @@ class StateKeeper {
         return timeToWaitForNextSoryLine(for: Date())
     }
     
+    func reset() {
+        gameState = GameState(points: 0, currentStoryLineId: "B3045_1", currentDialogIndex:0, timeToWait: 0, date: Date())
+    }
+    
     func timeToWaitForNextSoryLine(for date: Date) -> TimeInterval {
         let waitTime = date.timeIntervalSince(gameState.date)
         if gameState.timeToWait == 0 {
