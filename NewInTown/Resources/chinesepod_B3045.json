@@ -1,0 +1,62 @@
+{
+    "storyContent": [{
+                     "text": {
+                     "chinese": "服务员，请问你们这儿的招牌菜是哪一道?",
+                     "english": "Waiter, may I ask which is your signature dish?",
+                     "pinyin": "fúwùyuán， qǐngwèn nǐmen zhèr de zhāopai cài shì nǎ yī dào?"
+                     },
+                     "audioFileName": "chinesepod_B3045dg_1",
+                     "audioFileExtension": "mp3",
+                     "source": "person a"
+                     },
+                     {
+                     "text": {
+                     "chinese": "......比较贵的就是啦",
+                     "english": "... the most expensive one.",
+                     "pinyin": "...... bǐjiào guì de jiùshì la。"
+                     },
+                     "audioFileName": "chinesepod_B3045dg_2",
+                     "audioFileExtension": "mp3",
+                     "source": "person b"
+                     },
+                     {
+                     "text": {
+                     "chinese": "那...请问这一道辣不辣?",
+                     "english": "So... is the dish spicy?",
+                     "pinyin": "nà... qǐngwèn zhè yī dào là bù là?"
+                     },
+                     "audioFileName": "chinesepod_B3045dg_3",
+                     "audioFileExtension": "mp3",
+                     "source": "person a"
+                     },
+                     {
+                     "text": {
+                     "chinese": "你吃吃看就知道啦",
+                     "english": "You'll find out when you try it.",
+                     "pinyin": "nǐ chīchīkàn jiù zhīdào la"
+                     },
+                     "audioFileName": "chinesepod_B3045dg_4",
+                     "audioFileExtension": "mp3",
+                     "source": "person b"
+                     },
+                     {
+                     "text": {
+                     "chinese": "算了算了!我们不吃了，还是到对面吃包子去吧!",
+                     "english": "Forget it! We're not eating here, we'll go over the road to eat dumplings!",
+                     "pinyin": "suànle suànle! wǒmen bù chī le， háishì dào duìmiàn chī bāozi qù ba!"
+                     },
+                     "audioFileName": "chinesepod_B3045dg_5",
+                     "audioFileExtension": "mp3",
+                     "source": "person a"
+                     },
+                     {
+                     "text": {
+                     "chinese": "你......不吃就不吃!慢走!",
+                     "english": "If you don't want to eat, don't eat! Mind the door on your way out!",
+                     "pinyin": "nǐ...... bù chī jiù bù chī! màn zǒu!"
+                     },
+                     "audioFileName": "chinesepod_B3045dg_6",
+                     "audioFileExtension": "mp3",
+                     "source": "person b"
+                     }]
+}

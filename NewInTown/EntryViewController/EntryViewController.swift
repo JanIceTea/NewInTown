@@ -20,8 +20,16 @@ class EntryViewController: UIViewController {
     }
 
     @IBAction func didPressStartButton(_ sender: Any) {
-        let firstScene = FirstSceneViewController(nibName: nil, bundle: nil)
-        present(firstScene, animated: true, completion: nil)
+//        let firstScene = FirstSceneViewController(nibName: nil, bundle: nil)
+        var viewController: UIViewController?
+        if StateKeeper.shared.gameState.didSeeDialog {
+            viewController = FirstSceneViewController(nibName: nil, bundle: nil)
+        } else {
+            viewController = StoryPlaybackViewController(nibName: nil, bundle: nil)
+        }
+        
+        let navigationController = UINavigationController(rootViewController: viewController!)
+        present(navigationController, animated: true, completion: nil)
     }
 
     @IBAction func didPressResetButton(_ sender: Any) {

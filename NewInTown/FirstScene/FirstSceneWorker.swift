@@ -12,9 +12,31 @@
 
 import UIKit
 
+class StoryContentWorker {
+    
+    static var storyContentRoot: StoryContentRoot?
+
+    func readJson() {
+        guard let url = Bundle.main.url(forResource: "chinesepod_B3045", withExtension: "json") else {
+            print("Missing stories file ...")
+            return
+        }
+        
+        do {
+            let decoder = JSONDecoder()
+            let data = try Data(contentsOf: url)
+            let content = try decoder.decode(StoryContentRoot.self, from: data)
+            StoryContentWorker.storyContentRoot = content
+        } catch {
+            print("Reading stories failed ...")
+        }
+    }
+}
+
 class FirstSceneWorker {
     
     static var storyCollection: StoryCollection?
+
     private var currentStoryIndex = 0
     
     func readJson() {

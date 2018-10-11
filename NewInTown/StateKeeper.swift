@@ -14,13 +14,14 @@ struct GameState: Codable {
     var currentDialogIndex: Int = 0
     var timeToWait: TimeInterval = 0
     var date: Date
+    var didSeeDialog: Bool = false
 }
 
 class StateKeeper {
     
     static let shared: StateKeeper = StateKeeper()
     
-    private(set) var gameState = GameState(points: 0, currentStoryLineId: "B3045_1", currentDialogIndex:0, timeToWait: 0, date: Date())
+    private(set) var gameState = GameState(points: 0, currentStoryLineId: "B3045_1", currentDialogIndex:0, timeToWait: 0, date: Date(), didSeeDialog: false)
     private let documentName: String = "gamestate.json"
     
     var timeToWaitForNextSoryLine: TimeInterval {
@@ -28,7 +29,7 @@ class StateKeeper {
     }
     
     func reset() {
-        gameState = GameState(points: 0, currentStoryLineId: "B3045_1", currentDialogIndex:0, timeToWait: 0, date: Date())
+        gameState = GameState(points: 0, currentStoryLineId: "B3045_1", currentDialogIndex:0, timeToWait: 0, date: Date(), didSeeDialog: false)
     }
     
     func timeToWaitForNextSoryLine(for date: Date) -> TimeInterval {
@@ -42,6 +43,11 @@ class StateKeeper {
     func canStartStoryLine(storyLineId: String) -> Bool {
         print("timeToWaitForNextSoryLine: \(timeToWaitForNextSoryLine)")
         return timeToWaitForNextSoryLine <= 0
+    }
+    
+    func setDidSeeDialog() {
+        gameState.didSeeDialog = true
+        writeSettings()
     }
     
     func setGameState(points: Int, storyLineId: String, dialogIndex: Int, timeToWait: TimeInterval) {

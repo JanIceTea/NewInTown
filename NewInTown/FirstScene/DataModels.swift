@@ -37,10 +37,29 @@ struct Story: Codable {
     var id: String
     var level: String
     var storylines: [StoryLine]
-    var audioFileName: String,
+    var audioFileName: String
     var audioFileExtension: String
 }
 
 struct StoryCollection: Codable {
     var stories: [Story]
+}
+
+///
+
+struct StoryContentText: Codable {
+    var chinese: String
+    var english: String
+    var pinyin: String
+}
+
+struct StoryContent: Codable {
+    var text: StoryContentText
+    var audioFileName: String
+    var audioFileExtension: String
+    var source: String
+}
+
+struct StoryContentRoot: Codable {
+    var storyContent: [StoryContent]
 }
