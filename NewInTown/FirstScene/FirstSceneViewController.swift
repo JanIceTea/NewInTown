@@ -14,8 +14,9 @@ import UIKit
 
 protocol FirstSceneDisplayLogic: class {
     func displayFirstScene(viewModel: FirstScene.FetchFirstScene.ViewModel)
-    func displayFailure(withMessage message:String)
-    func displaySuccess(withMessage message:String)
+    func displayFailure(withMessage message: String)
+    func displaySuccess(withMessage message: String)
+    func displayWaiting(withTimeString timeString: String)
 }
 
 class FirstSceneViewController: UIViewController, FirstSceneDisplayLogic, UITextFieldDelegate {
@@ -36,6 +37,7 @@ class FirstSceneViewController: UIViewController, FirstSceneDisplayLogic, UIText
     }
     @IBOutlet weak var scoreCountLabel: UILabel!
     
+    @IBOutlet weak var timeLeftLabel: UILabel!
     // MARK: Object lifecycle
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -135,6 +137,10 @@ class FirstSceneViewController: UIViewController, FirstSceneDisplayLogic, UIText
     
     func displaySuccess(withMessage message:String) {
         displayInfoToast(withMessage: message)
+    }
+    
+    func displayWaiting(withTimeString timeString: String) {
+        timeLeftLabel.text = timeString
     }
     
     // MARK: - UITextFieldDelegate

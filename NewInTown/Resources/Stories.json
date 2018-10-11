@@ -6,7 +6,7 @@
             "level": "Elementary",
             "storylines": [
                 {
-                    "time": 240,
+                    "time": 0,
                     "id": "B3045_1",
                     "dialogs": [
                         {
@@ -22,23 +22,43 @@
                             },
                             "points": 10,
                             "id": "B3045_1_1"
-                        },
-                        {
-                            "question":{
-                                "pinyin": "",
-                                "chinese": "",
-                                "english": "I would like to have known what their specialty dish was.  How do we say ‘specialty dish’?"
-                            },
-                            "answer": {
-                                "pinyin": "zhao1pai cai4",
-                                "chinese": "招牌菜"
-                            },
-                            "points": 10,
-                            "id": "B3045_1_2"
-
                         }
                     ]
-                }
+                },
+               {
+               "time": 240,
+               "id": "B3045_2",
+               "dialogs": [
+                           {
+                           "question":
+                           {
+                           "pinyin": "",
+                           "chinese": "",
+                           "english": "2 - When we needed to get the attention of the waitress – what did we call her?"
+                           },
+                           "answer": {
+                           "pinyin": "fu2wu4yuan2",
+                           "chinese": "服务员"
+                           },
+                           "points": 10,
+                           "id": "B3045_1_1"
+                           },
+                           {
+                           "question":{
+                           "pinyin": "",
+                           "chinese": "",
+                           "english": "I would like to have known what their specialty dish was.  How do we say ‘specialty dish’?"
+                           },
+                           "answer": {
+                           "pinyin": "zhao1pai cai4",
+                           "chinese": "招牌菜"
+                           },
+                           "points": 10,
+                           "id": "B3045_1_2"
+                           
+                           }
+                           ]
+               }
             ]
         }
     ]

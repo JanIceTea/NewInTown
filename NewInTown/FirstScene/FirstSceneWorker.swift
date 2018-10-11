@@ -15,6 +15,7 @@ import UIKit
 class FirstSceneWorker {
     
     static var storyCollection: StoryCollection?
+    private var currentStoryIndex = 0
     
     func readJson() {
         guard let url = Bundle.main.url(forResource: "Stories", withExtension: "json") else {
@@ -54,6 +55,34 @@ class FirstSceneWorker {
             return storyline.dialogs[index]
         }
         return nil
+    }
+    
+    func getNextStoryLineId(forStoryLineId storyLineId: String, atIndex index: Int) -> String {
+        guard let storyline = getStoryLine(forId: storyLineId) else {
+            return storyLineId
+        }
+        
+        if index < storyline.dialogs.count {
+            return storyLineId
+        }
+        
+        guard let storyCollection = FirstSceneWorker.storyCollection else {
+            return storyLineId
+        }
+        
+        let allStoryLines = storyCollection.stories[currentStoryIndex].storylines
+        
+        guard let index = (allStoryLines.index { (storyline) -> Bool in
+            storyline.id == storyLineId
+        }) else {
+            return storyLineId
+        }
+        let nextIndex = index + 1
+        if nextIndex < allStoryLines.count {
+            return allStoryLines[nextIndex].id
+        }
+        
+        return storyLineId
     }
 
 }

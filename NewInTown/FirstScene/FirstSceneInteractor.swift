@@ -28,6 +28,7 @@ class FirstSceneInteractor: FirstSceneBusinessLogic, FirstSceneDataStore {
     var currentScore: Int = 0
     var currentStoryLineId: String = "B3045_1"
     var currentDialogIndex: Int = 0
+    var nextWaitTime: TimeInterval = 0.0
     
     let worker = FirstSceneWorker()
     
@@ -54,27 +55,43 @@ class FirstSceneInteractor: FirstSceneBusinessLogic, FirstSceneDataStore {
         } else {
             currentScore = currentScore - 5
         }
-
+        
+        let nextStoryLineId = worker.getNextStoryLineId(forStoryLineId: currentStoryLineId, atIndex: currentDialogIndex)
+        nextWaitTime = 0
+        if nextStoryLineId != currentStoryLineId {
+            if let storyLine = worker.getStoryLine(forId: nextStoryLineId) {
+                nextWaitTime = TimeInterval(storyLine.time)
+                response.timeToWaitString = String(nextWaitTime)
+                response.isBlockedForNext = nextWaitTime > 0
+            }
+            currentDialogIndex = 0
+        }
+        currentStoryLineId = nextStoryLineId
+        
         response.score = currentScore
         response.nextIndex = currentDialogIndex
         response.storyLineId = currentStoryLineId
+        
         presenter?.updateFirstScene(response: response)
         updateGameData()
     }
     
     private func updateGameData() {
-        StateKeeper.shared.setGameState(points: currentScore, storyLineId: currentStoryLineId, dialogIndex: currentDialogIndex)
+        StateKeeper.shared.setGameState(points: currentScore, storyLineId: currentStoryLineId, dialogIndex: currentDialogIndex, timeToWait: nextWaitTime )
     }
     
     func restoreFromGameState() {
         currentStoryLineId = StateKeeper.shared.gameState.currentStoryLineId
         currentScore = StateKeeper.shared.gameState.points
         currentDialogIndex = StateKeeper.shared.gameState.currentDialogIndex
+        nextWaitTime = StateKeeper.shared.timeToWaitForNextSoryLine
         
         var response = FirstScene.FetchFirstScene.Response()
         response.storyLineId = currentStoryLineId
         response.score = currentScore
         response.nextIndex = currentDialogIndex
+        response.timeToWaitString = String(nextWaitTime)
+        response.isBlockedForNext = nextWaitTime > 0
         presenter?.updateFirstScene(response: response)
     }
 

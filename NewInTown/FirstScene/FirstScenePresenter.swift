@@ -29,13 +29,20 @@ class FirstScenePresenter: FirstScenePresentationLogic {
         guard let dialog = worker.getDialog(forStoryLineId: response.storyLineId, atIndex: response.nextIndex) else {
             return
         }
+        
         viewModel.scoreString = String(response.score)
         viewModel.nextQuestion = dialog.question.english
-        if response.hasCorrectAnswer {
-            viewController?.displaySuccess(withMessage: "Great - Going to the next!")
+        viewModel.timeToWaitString = response.timeToWaitString
+        
+        if response.isBlockedForNext {
+            viewController?.displayWaiting(withTimeString: viewModel.timeToWaitString)
         } else {
-            viewController?.displayFailure(withMessage: "Ooops! Try again!")
+            if response.hasCorrectAnswer {
+                viewController?.displaySuccess(withMessage: "Great - Going to the next!")
+            } else {
+                viewController?.displayFailure(withMessage: "Ooops! Try again!")
+            }
+            viewController?.displayFirstScene(viewModel: viewModel)
         }
-        viewController?.displayFirstScene(viewModel: viewModel)
     }
 }

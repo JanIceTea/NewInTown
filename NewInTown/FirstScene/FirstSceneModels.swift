@@ -27,11 +27,14 @@ enum FirstScene {
             var score: Int = 0
             var nextIndex: Int = 0
             var storyLineId: String = ""
+            var isBlockedForNext: Bool = false
+            var timeToWaitString: String = ""
         }
         
         struct ViewModel {
             var scoreString: String = "0"
             var nextQuestion: String = ""
+            var timeToWaitString: String = ""
         }
     }
 }
