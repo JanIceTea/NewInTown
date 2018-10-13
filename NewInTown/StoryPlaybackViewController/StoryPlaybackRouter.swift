@@ -26,15 +26,13 @@ class StoryPlaybackRouter: NSObject, StoryPlaybackRoutingLogic, StoryPlaybackDat
     var dataStore: StoryPlaybackDataStore?
     
     // MARK: Routing
+    private var durationToWait: TimeInterval = 20 //todo move to config
     
     func routeToNext() {
-            let destinationVC = FirstSceneViewController(nibName: nil, bundle: nil)
-//            var destinationDS = destinationVC.router!.dataStore!
-//            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
+        let destinationVC = FirstSceneViewController(nibName: nil, bundle: nil)
         StateKeeper.shared.setDidSeeDialog()
-        //todo
-//        StateKeeper.shared.setGameState(points: 0, storyLineId: "B3045_1", dialogIndex: 0, timeToWait: 220)
-            navigateToSomewhere(source: viewController!, destination: destinationVC)
+        StateKeeper.shared.setGameState(points: 0, storyLineId: "B3045_1", dialogIndex: 0, timeToWait: durationToWait)
+        navigateToSomewhere(source: viewController!, destination: destinationVC)
     }
 
     // MARK: Navigation
@@ -42,10 +40,5 @@ class StoryPlaybackRouter: NSObject, StoryPlaybackRoutingLogic, StoryPlaybackDat
     func navigateToSomewhere(source: StoryPlaybackViewController, destination: FirstSceneViewController) {
         source.show(destination, sender: nil)
     }
-//
-//    // MARK: Passing data
-//
-//    func passDataToSomewhere(source: StoryPlaybackDataStore, destination: inout SomewhereDataStore) {
-//        destination.name = source.name
-//    }
+
 }

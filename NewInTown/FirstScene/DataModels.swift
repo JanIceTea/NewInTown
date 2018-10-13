@@ -39,6 +39,7 @@ struct Story: Codable {
     var storylines: [StoryLine]
     var audioFileName: String
     var audioFileExtension: String
+    var vocabulary: [StoryContentText]
 }
 
 struct StoryCollection: Codable {

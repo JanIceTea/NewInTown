@@ -5,6 +5,28 @@
                 "level": "Elementary",
                 "audioFileName": "chinesepod_B3045dg",
                 "audioFileExtension": "mp3",
+                "vocabulary": [
+                        {
+                            "chinese": "服务员",
+                            "pinyin": "fu2wu4yuan2",
+                            "english": "waitress"
+                        },
+                        {
+                            "chinese": "比较贵",
+                            "pinyin": "bi3jiao4 gui4",
+                            "english": "relatively expensive"
+                        },
+                        {
+                            "chinese": "比较便宜",
+                            "pinyin": "bi3jiao4 pian2yi",
+                            "english": "relatively cheap"
+                        },
+                        {
+                            "chinese": "算了算了!",
+                            "pinyin": "suan4le suan4le!",
+                            "english": "forget it!"
+                        }
+                ],
                 "storylines": [{
                                "time": 220,
                                "id": "B3045_1",

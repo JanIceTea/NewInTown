@@ -18,18 +18,26 @@ class EntryViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     @IBAction func didPressStartButton(_ sender: Any) {
-//        let firstScene = FirstSceneViewController(nibName: nil, bundle: nil)
         var viewController: UIViewController?
         if StateKeeper.shared.gameState.didSeeDialog {
             viewController = FirstSceneViewController(nibName: nil, bundle: nil)
         } else {
             viewController = StoryPlaybackViewController(nibName: nil, bundle: nil)
         }
-        
+        let button = UIButton(type: .custom)
+        button.setTitle("close", for: .normal)
+        button.setTitleColor(UIColor.gray, for: .normal)
+        button.bounds = CGRect(x: 0, y: 0, width: 80, height: 44)
+        button.addTarget(self, action: #selector(didPressCloseButton), for: .touchUpInside)
         let navigationController = UINavigationController(rootViewController: viewController!)
+        viewController?.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
         present(navigationController, animated: true, completion: nil)
+    }
+    
+    @IBAction func didPressCloseButton() {
+        dismiss(animated: true)
     }
 
     @IBAction func didPressResetButton(_ sender: Any) {

@@ -28,7 +28,9 @@ class FirstSceneViewController: UIViewController, FirstSceneDisplayLogic, UIText
     
     // MARK: Views
     @IBOutlet weak var dialogContentView: UIView!
+    @IBOutlet weak var waitInfoContentView: UIView!
     
+    @IBOutlet weak var countdownCounterLabel: UILabel!
     @IBOutlet weak var infoToastContentView: UIView!
     @IBOutlet weak var infoToastLabel: UILabel!
     
@@ -121,6 +123,8 @@ class FirstSceneViewController: UIViewController, FirstSceneDisplayLogic, UIText
     private func displayInfoToast(withMessage message:String, completion: ((Bool) -> Swift.Void)? = nil) {
         infoToastLabel.text = message
         infoToastContentView.isHidden = false
+        waitInfoContentView.isHidden = true
+
         UIView.animateKeyframes(withDuration: 2, delay: 0, options: .beginFromCurrentState, animations: {
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.3) {
                 self.infoToastContentView.alpha = 1
@@ -149,6 +153,8 @@ class FirstSceneViewController: UIViewController, FirstSceneDisplayLogic, UIText
         timeLeftLabel.text = timeString
         timeLeftLabel.isHidden = false
         dialogContentView.isHidden = true
+        waitInfoContentView.isHidden = false
+        countdownCounterLabel.text = timeString
     }
     
     func displayScore(withString scoreString: String) {

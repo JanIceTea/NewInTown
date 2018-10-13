@@ -45,6 +45,9 @@ class StoryPlaybackInteractor: StoryPlaybackBusinessLogic, StoryPlaybackDataStor
         guard let content = StoryContentWorker.storyContentRoot?.storyContent else {
             return
         }
+        if currentIndex >= content.count {
+            return
+        }
         let currentContent = content[currentIndex]
         guard let url = Bundle.main.url(forResource: currentContent.audioFileName, withExtension: currentContent.audioFileExtension) else {
             return
@@ -72,6 +75,7 @@ class StoryPlaybackInteractor: StoryPlaybackBusinessLogic, StoryPlaybackDataStor
         response.text = currentContent.text
         response.playingState = soundfilePlayerWorker.isPlaying ? .playing : .finished
         response.languageSelection = languageSelection
+        response.isDialogFinished = isFinished
         presenter?.presentStoryPlayback(response: response)
     }
     
