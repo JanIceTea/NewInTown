@@ -18,6 +18,13 @@ enum SoundPlaybackState {
     case finished
 }
 
+enum LanguageSelection {
+    case simplified
+    case traditional
+    case pinyin
+    case english
+}
+
 enum StoryPlayback {
     
     // MARK: Use cases
@@ -32,11 +39,13 @@ enum StoryPlayback {
             var playingState: SoundPlaybackState?
             var text: StoryContentText?
             var isDialogFinished: Bool?
+            var languageSelection: LanguageSelection?
         }
         
         struct ViewModel {
             var playingState: SoundPlaybackState?
-            var chineseText: String?
+            var
+            dialogText: String?
             var shouldShowNextButton: Bool
         }
     }

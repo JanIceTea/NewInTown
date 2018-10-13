@@ -16,6 +16,7 @@ protocol StoryPlaybackBusinessLogic {
     func fetchStoryPlayback(request: StoryPlayback.FetchStoryPlayback.Request)
     func playAudio()
     func playStoryAtCurrentIndex()
+    func togglePinyin()
 }
 
 protocol StoryPlaybackDataStore {
@@ -29,6 +30,8 @@ class StoryPlaybackInteractor: StoryPlaybackBusinessLogic, StoryPlaybackDataStor
     var presenter: StoryPlaybackPresentationLogic?
     var currentIndex: Int = 0
     var isFinished: Bool = false
+    var languageSelection: LanguageSelection = .simplified
+    var currentContent: StoryContent?
     
     // MARK: Perform operation on StoryPlayback
     
@@ -53,14 +56,23 @@ class StoryPlaybackInteractor: StoryPlaybackBusinessLogic, StoryPlaybackDataStor
         soundfilePlayerWorker.delegate = self
         soundfilePlayerWorker.playSoundFile(atURL: url, numberOfLoops: 0, waitTime: 0)
         
+        self.currentContent = currentContent
+        
+        presentCurrentStoryContent()
+        
+        currentIndex = currentIndex + 1
+        isFinished = currentIndex >= content.count
+    }
+    
+    func presentCurrentStoryContent() {
+        guard let currentContent = currentContent else {
+            return
+        }
         var response = StoryPlayback.FetchStoryPlayback.Response()
         response.text = currentContent.text
-        response.playingState = .playing
+        response.playingState = soundfilePlayerWorker.isPlaying ? .playing : .finished
+        response.languageSelection = languageSelection
         presenter?.presentStoryPlayback(response: response)
-
-        currentIndex = currentIndex + 1
-        
-        isFinished = currentIndex >= content.count
     }
     
     func playAudio() {
@@ -75,12 +87,23 @@ class StoryPlaybackInteractor: StoryPlaybackBusinessLogic, StoryPlaybackDataStor
         soundfilePlayerWorker.playSoundFile(atURL: url, numberOfLoops: 0, waitTime: 0)
     }
 
-    // MARK: -PlayWorkerDelegate
+    func togglePinyin() {
+        switch languageSelection {
+        case .simplified:
+            languageSelection = .pinyin
+        case .pinyin:
+            languageSelection = .simplified
+        default:
+           return
+        }
+        
+        presentCurrentStoryContent()
+    }
+    
+    // MARK: - PlayWorkerDelegate
+    
     func didFinishPlaying(worker: PlayWorker) {
-        var response  = StoryPlayback.FetchStoryPlayback.Response()
-        response.playingState = .finished
-        response.isDialogFinished = isFinished
-        presenter?.presentStoryPlayback(response: response)
+        presentCurrentStoryContent()
     }
     
     func didStartPlaying(worker: PlayWorker) {

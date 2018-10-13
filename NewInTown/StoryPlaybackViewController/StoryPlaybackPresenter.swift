@@ -22,9 +22,22 @@ class StoryPlaybackPresenter: StoryPlaybackPresentationLogic {
     
     // MARK: Present StoryPlayback
     
+    func textForLanguage(_ text: StoryContentText, langSelection: LanguageSelection) -> String {
+        switch langSelection {
+        case .pinyin:
+            return text.pinyin
+        default:
+            return text.chinese
+        }
+    }
+    
     func presentStoryPlayback(response: StoryPlayback.FetchStoryPlayback.Response) {
         let isDialogFinished = response.isDialogFinished ?? false
-        let viewModel = StoryPlayback.FetchStoryPlayback.ViewModel(playingState: response.playingState, chineseText: response.text?.chinese, shouldShowNextButton: isDialogFinished)
+        var text  = ""
+        if let textObj = response.text, let langSelection = response.languageSelection {
+            text = textForLanguage(textObj, langSelection: langSelection)
+        }
+        let viewModel = StoryPlayback.FetchStoryPlayback.ViewModel(playingState: response.playingState, dialogText: text, shouldShowNextButton: isDialogFinished)
         viewController?.displayStoryPlayback(viewModel: viewModel)
     }
 }

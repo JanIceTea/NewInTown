@@ -11,6 +11,10 @@ import XCTest
 @testable import NewInTown
 
 class FirstScenePresenterMock: FirstScenePresentationLogic {
+    func updateWaitingTime(withString timeString: String) {
+        
+    }
+    
     
     var response: FirstScene.FetchFirstScene.Response?
     

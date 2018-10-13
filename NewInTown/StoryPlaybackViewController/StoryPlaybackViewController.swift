@@ -17,11 +17,12 @@ protocol StoryPlaybackDisplayLogic: class {
 }
 
 class StoryPlaybackViewController: UIViewController, StoryPlaybackDisplayLogic {
-    @IBOutlet weak var chineseDialogLabel: UILabel!
     
+    @IBOutlet weak var chineseDialogLabel: UILabel!
     @IBOutlet weak var nextDialogPieceButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var playAudioButton: UIButton!
+    
     var interactor: StoryPlaybackBusinessLogic?
     var router: (NSObjectProtocol & StoryPlaybackRoutingLogic & StoryPlaybackDataPassing)?
     
@@ -78,11 +79,11 @@ class StoryPlaybackViewController: UIViewController, StoryPlaybackDisplayLogic {
     }
     
     private func setupAccessibilityIdentifers() {
-    
+        
     }
     
-    @IBAction func didPressPlayAudioButton(_ sender: Any) {
-        playAudio()
+    @IBAction func didPressToggleLanguageButton(_ sender: Any) {
+        interactor?.togglePinyin()
     }
     
     @IBAction func didPressNextButton(_ sender: Any) {
@@ -94,9 +95,17 @@ class StoryPlaybackViewController: UIViewController, StoryPlaybackDisplayLogic {
         interactor?.playStoryAtCurrentIndex()
     }
     
+    // MARK: - Audio
+    
     func playAudio() {
         interactor?.playAudio()
     }
+
+    // MARK: - languange
+
+    
+    
+    // MARK: - navigation
     
     func navigateToFirstScene() {
         router?.routeToNext()
@@ -108,13 +117,13 @@ class StoryPlaybackViewController: UIViewController, StoryPlaybackDisplayLogic {
     }
     
     func displayStoryPlayback(viewModel: StoryPlayback.FetchStoryPlayback.ViewModel) {
-        chineseDialogLabel.text = viewModel.chineseText
+        chineseDialogLabel.text = viewModel.dialogText
         guard let playingState = viewModel.playingState else {
             return
         }
         switch playingState {
         case .finished:
-            nextDialogPieceButton.isHidden = false
+            nextDialogPieceButton.isHidden = viewModel.shouldShowNextButton
         case .stopped:
             nextDialogPieceButton.isHidden = false
 

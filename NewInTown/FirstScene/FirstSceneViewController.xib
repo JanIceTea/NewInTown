@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,17 +54,17 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8Yz-Xm-fFd">
-                            <rect key="frame" x="20" y="80" width="627" height="75"/>
+                            <rect key="frame" x="20" y="80" width="627" height="111"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayC-yN-W7j">
-                                    <rect key="frame" x="0.0" y="0.0" width="627" height="25"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="627" height="61"/>
                                     <string key="text">How many dumplings would you like? Remember you usually eat 2 yourself and your friends asked you to bring 8. Write the answer in pinyin! (write with tones like yi1 (for one -)</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eha-ox-P6j">
-                                    <rect key="frame" x="0.0" y="45" width="627" height="30"/>
+                                    <rect key="frame" x="0.0" y="81" width="627" height="30"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
@@ -96,7 +96,6 @@
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="8Yz-Xm-fFd" secondAttribute="trailing" constant="20" id="8qb-HI-9Wb"/>
                         <constraint firstItem="iRY-CM-IZ9" firstAttribute="top" secondItem="pLn-e3-cVB" secondAttribute="top" constant="20" id="9sc-do-vtF"/>
-                        <constraint firstAttribute="bottom" secondItem="8Yz-Xm-fFd" secondAttribute="bottom" constant="220" id="IiM-PF-iYy"/>
                         <constraint firstItem="eJF-dK-C79" firstAttribute="centerY" secondItem="pLn-e3-cVB" secondAttribute="centerY" id="fbL-oe-ESu"/>
                         <constraint firstItem="iRY-CM-IZ9" firstAttribute="leading" secondItem="pLn-e3-cVB" secondAttribute="leading" constant="20" id="heC-2f-Aib"/>
                         <constraint firstAttribute="trailing" secondItem="iRY-CM-IZ9" secondAttribute="trailing" constant="20" id="mlg-1H-hz1"/>
