@@ -32,7 +32,6 @@ class StoryPlaybackRouter: NSObject, StoryPlaybackRoutingLogic, StoryPlaybackDat
         StateKeeper.shared.setDidSeeDialog()
         navigateToVocabOverview(source: viewController!, destination: destinationVC)
     }
-
     
     // MARK: Navigation
     

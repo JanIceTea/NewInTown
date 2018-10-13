@@ -20,9 +20,7 @@ class VocabOverviewViewController: UIViewController, VocabOverviewDisplayLogic {
     
     var interactor: VocabOverviewBusinessLogic?
     var router: (NSObjectProtocol & VocabOverviewRoutingLogic & VocabOverviewDataPassing)?
-    
-    @IBOutlet weak var vocabularyStackView: UIStackView!
-    
+        
     @IBOutlet weak var chineseStackView: UIStackView!
     
     @IBOutlet weak var pinyinStackView: UIStackView!
@@ -89,6 +87,7 @@ class VocabOverviewViewController: UIViewController, VocabOverviewDisplayLogic {
     
     
     @IBAction func didPressNextButton(_ sender: Any) {
+        router?.routeToNext()
     }
     
     // MARK: Perform an initial request

@@ -62,7 +62,7 @@ class FirstSceneInteractor: FirstSceneBusinessLogic, FirstSceneDataStore {
         if nextStoryLineId != currentStoryLineId {
             if let storyLine = worker.getStoryLine(forId: nextStoryLineId) {
                 nextWaitTime = TimeInterval(storyLine.time)
-                response.timeToWaitString = String(nextWaitTime)
+                response.timeToWaitString = String(Int(nextWaitTime.rounded()))
                 response.isBlockedForNext = nextWaitTime > 0
             }
             currentDialogIndex = 0
@@ -95,7 +95,7 @@ class FirstSceneInteractor: FirstSceneBusinessLogic, FirstSceneDataStore {
         response.storyLineId = currentStoryLineId
         response.score = currentScore
         response.nextIndex = currentDialogIndex
-        response.timeToWaitString = String(nextWaitTime)
+        response.timeToWaitString = String(Int(nextWaitTime.rounded()))
         response.isBlockedForNext = nextWaitTime > 0
         
         presenter?.updateFirstScene(response: response)
