@@ -23,7 +23,7 @@ class VocabOverviewPresenter: VocabOverviewPresentationLogic {
     // MARK: Present VocabOverview
     
     func presentVocabOverview(response: VocabOverview.FetchVocabOverview.Response) {
-        let viewModel = VocabOverview.FetchVocabOverview.ViewModel()
+        let viewModel = VocabOverview.FetchVocabOverview.ViewModel(vocabulary: response.vocabulary )
         viewController?.displayVocabOverview(viewModel: viewModel)
     }
 }

@@ -27,6 +27,7 @@
 		3D49DB8721724EA6002F3685 /* VocabOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49DB8121724EA6002F3685 /* VocabOverviewViewController.swift */; };
 		3D49DB8821724EA6002F3685 /* VocabOverviewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49DB8221724EA6002F3685 /* VocabOverviewInteractor.swift */; };
 		3D49DB8B217276D4002F3685 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49DB8A217276D3002F3685 /* AudioManager.swift */; };
+		3D49DB8D21727F81002F3685 /* VocabOverviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D49DB8C21727F81002F3685 /* VocabOverviewViewController.xib */; };
 		3D7D273C216FD4A5002A333D /* chinesepod_B3045dg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D273B216FD4A5002A333D /* chinesepod_B3045dg.mp3 */; };
 		3D7D273E216FD65F002A333D /* chinesepod_B3045.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D273D216FD65F002A333D /* chinesepod_B3045.json */; };
 		3D7D2746216FD6D9002A333D /* StoryPlaybackPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D2740216FD6D9002A333D /* StoryPlaybackPresenter.swift */; };
@@ -91,6 +92,7 @@
 		3D49DB8121724EA6002F3685 /* VocabOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabOverviewViewController.swift; sourceTree = "<group>"; };
 		3D49DB8221724EA6002F3685 /* VocabOverviewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabOverviewInteractor.swift; sourceTree = "<group>"; };
 		3D49DB8A217276D3002F3685 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		3D49DB8C21727F81002F3685 /* VocabOverviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VocabOverviewViewController.xib; sourceTree = "<group>"; };
 		3D7D273B216FD4A5002A333D /* chinesepod_B3045dg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chinesepod_B3045dg.mp3; sourceTree = "<group>"; };
 		3D7D273D216FD65F002A333D /* chinesepod_B3045.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chinesepod_B3045.json; sourceTree = "<group>"; };
 		3D7D2740216FD6D9002A333D /* StoryPlaybackPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPlaybackPresenter.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				3D49DB8021724EA6002F3685 /* VocabOverviewModels.swift */,
 				3D49DB8121724EA6002F3685 /* VocabOverviewViewController.swift */,
 				3D49DB8221724EA6002F3685 /* VocabOverviewInteractor.swift */,
+				3D49DB8C21727F81002F3685 /* VocabOverviewViewController.xib */,
 			);
 			path = VocabOverview;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				3D7D2759216FE5C7002A333D /* chinesepod_B3045dg_5.mp3 in Resources */,
 				3D7D273E216FD65F002A333D /* chinesepod_B3045.json in Resources */,
 				3DA6E58221693D8600F85A37 /* Main.storyboard in Resources */,
+				3D49DB8D21727F81002F3685 /* VocabOverviewViewController.xib in Resources */,
 				3D7D273C216FD4A5002A333D /* chinesepod_B3045dg.mp3 in Resources */,
 				3D7D275A216FE5C7002A333D /* chinesepod_B3045dg_6.mp3 in Resources */,
 				3D445701216E37C30003F4B1 /* Stories.json in Resources */,

@@ -23,11 +23,11 @@ enum VocabOverview {
         }
         
         struct Response {
-            
+            var vocabulary: [StoryContentText]
         }
         
         struct ViewModel {
-            
+            var vocabulary: [StoryContentText]
         }
     }
 }

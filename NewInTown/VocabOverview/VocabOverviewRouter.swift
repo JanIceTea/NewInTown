@@ -13,7 +13,7 @@
 import UIKit
 
 @objc protocol VocabOverviewRoutingLogic {
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToNext()
 }
 
 protocol VocabOverviewDataPassing {
@@ -26,32 +26,18 @@ class VocabOverviewRouter: NSObject, VocabOverviewRoutingLogic, VocabOverviewDat
     var dataStore: VocabOverviewDataStore?
     
     // MARK: Routing
+    private var durationToWait: TimeInterval = 20 //todo move to config
     
-//    func routeToSomewhere(segue: UIStoryboardSegue?) {
-//
-//        if let segue = segue {
-//            let destinationVC = segue.destination as! SomewhereViewController
-//            var destinationDS = destinationVC.router!.dataStore!
-//            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-//        }
-//        else {
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-//            var destinationDS = destinationVC.router!.dataStore!
-//            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-//            navigateToSomewhere(source: viewController!, destination: destinationVC)
-//        }
-//    }
-//
-//    // MARK: Navigation
-//
-//    func navigateToSomewhere(source: VocabOverviewViewController, destination: SomewhereViewController) {
-//        source.show(destination, sender: nil)
-//    }
-//
-//    // MARK: Passing data
-//
-//    func passDataToSomewhere(source: VocabOverviewDataStore, destination: inout SomewhereDataStore) {
-//        destination.name = source.name
-//    }
+    func routeToNext() {
+        let destinationVC = FirstSceneViewController(nibName: nil, bundle: nil)
+        StateKeeper.shared.setDidSeeDialog()
+        StateKeeper.shared.setGameState(points: 0, storyLineId: "B3045_1", dialogIndex: 0, timeToWait: durationToWait)
+        navigateToFirstScene(source: viewController!, destination: destinationVC)
+    }
+    
+    // MARK: Navigation
+    
+    func navigateToFirstScene(source: VocabOverviewViewController, destination: FirstSceneViewController) {
+        source.show(destination, sender: nil)
+    }
 }

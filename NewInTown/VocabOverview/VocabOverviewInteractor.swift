@@ -23,14 +23,18 @@ protocol VocabOverviewDataStore {
 class VocabOverviewInteractor: VocabOverviewBusinessLogic, VocabOverviewDataStore {
     
     var presenter: VocabOverviewPresentationLogic?
-    //var name: String = ""
-    
+    let worker = FirstSceneWorker()
+
     // MARK: Perform operation on VocabOverview
     
     func fetchVocabOverview(request: VocabOverview.FetchVocabOverview.Request) {
         // Perform network requests here and present afterwards
+        guard let storyCollection = FirstSceneWorker.storyCollection else {
+            return
+        }
+        let story = storyCollection.stories[0]
         
-        let response = VocabOverview.FetchVocabOverview.Response()
+        let response = VocabOverview.FetchVocabOverview.Response(vocabulary: story.vocabulary )
         presenter?.presentVocabOverview(response: response)
     }
 }

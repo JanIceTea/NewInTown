@@ -21,8 +21,16 @@ class VocabOverviewViewController: UIViewController, VocabOverviewDisplayLogic {
     var interactor: VocabOverviewBusinessLogic?
     var router: (NSObjectProtocol & VocabOverviewRoutingLogic & VocabOverviewDataPassing)?
     
-    // MARK: Object lifecycle
+    @IBOutlet weak var vocabularyStackView: UIStackView!
     
+    @IBOutlet weak var chineseStackView: UIStackView!
+    
+    @IBOutlet weak var pinyinStackView: UIStackView!
+    
+    @IBOutlet weak var englishStackview: UIStackView!
+    
+    // MARK: Object lifecycle
+
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setupVIPCycle()
@@ -77,6 +85,12 @@ class VocabOverviewViewController: UIViewController, VocabOverviewDisplayLogic {
     
     }
     
+    // MARK: Actions
+    
+    
+    @IBAction func didPressNextButton(_ sender: Any) {
+    }
+    
     // MARK: Perform an initial request
     
     func performRequest() {
@@ -85,5 +99,19 @@ class VocabOverviewViewController: UIViewController, VocabOverviewDisplayLogic {
     }
     
     func displayVocabOverview(viewModel: VocabOverview.FetchVocabOverview.ViewModel) {
+        let vocab = viewModel.vocabulary
+        for text in vocab {
+            var label = UILabel(frame: CGRect(x: 0, y: 0, width: 80, height: 22))
+            label.text = text.chinese
+            chineseStackView.addArrangedSubview(label)
+            
+            label = UILabel(frame: CGRect(x: 0, y: 0, width: 80, height: 22))
+            label.text = text.pinyin
+            pinyinStackView.addArrangedSubview(label)
+
+            label = UILabel(frame: CGRect(x: 0, y: 0, width: 80, height: 22))
+            label.text = text.english
+            englishStackview.addArrangedSubview(label)
+        }
     }
 }
