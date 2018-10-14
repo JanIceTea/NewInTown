@@ -30,7 +30,7 @@
         "audioFileName": "chinesepod_B3045dg_3",
         "audioFileExtension": "mp3",
         "source": "person a",
-        "imageName": "Restaurant_2"
+        "imageName": "Restaurant_3"
     },
     {
         "text": {
@@ -52,7 +52,7 @@
         "audioFileName": "chinesepod_B3045dg_5",
         "audioFileExtension": "mp3",
         "source": "person a",
-        "imageName": "Restaurant_2"
+        "imageName": "Restaurant_3"
     },
     {
         "text": {
@@ -63,7 +63,7 @@
         "audioFileName": "chinesepod_B3045dg_6",
         "audioFileExtension": "mp3",
         "source": "person b",
-        "imageName": "Restaurant_2"
+        "imageName": "Restaurant_4"
     }
     ]
 }
