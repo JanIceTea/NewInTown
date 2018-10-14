@@ -123,9 +123,11 @@ After 24 hours:
 
 
 Q: The owner indicated that the rude waitress was her daughter.  How did she say that?
+	
 	A: ta[1] shi[4] wo[3] nü’[3]er[2]	她是我女儿
 	
 Q: She told her daughter to work there!  What word is the verb ‘to work’?
+	
 	A: shang[4]ban[1]		上班
 	
 
@@ -136,9 +138,11 @@ Q: She told her daughter to work there!  What word is the verb ‘to work’?
 After 4 hours
 
 Q: Here’s an important question – how do you say ‘bathroom’?
+	
 	A: xi[3]shou[3]jian[1]
 	
 Q: So, how do we ask ‘where is the bathroom?”
+	
 	A: xi[3]shou[3]jian[1] zai[4] na[3]li ?
 	
 	
@@ -146,12 +150,15 @@ After 8 hours
 
 
 Q: How did he say it was located on the second floor?
+	
 	A: zai[4] er[4]lou[2]
 	
 Q: Please be polite – say ‘thank you’
+	
 	A: xie[4]xie
 	
 Q: How did he respond by saying ‘not at all’
+	
 	A: bu[4] yong[4] xie[4]
 
 
@@ -162,9 +169,11 @@ After 4 hours
 
 
 Q: Oh my, where is my luggage?  How do you say ‘my luggage’?
+	
 	A: wo[3]de xing[2]li
 	
 Q: How do you say, ‘my luggage cannot be found?’
+	
 	A: wo[3]de xing[2]li zhao[3]bu[2]dao[4]
 	
 	
@@ -172,13 +181,17 @@ After 8 hours
 
 
 Q: How do you say, ‘my passport is missing’?
+	
 	A: wo[3]de hu[4]zhao[4] diu[4]le
 	
 	
 Q: How do you say, ‘… wallet is also missing’?
+	
 	A: qian[2]bao[1] ye[3] diu[4]le
 	
 	
 Q: Time to offer some help.  How do you say ‘I will help you look?’
+	
 	A: wo[3] bang[1] ni[3] zhao[3]
 
+John Pfotenhauer & Jan Trutzschler
