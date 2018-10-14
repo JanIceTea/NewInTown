@@ -15,8 +15,13 @@ The prototype provides a working example of the skeletal structure of the game. 
 - Multiple levels, Newbie, elementary, etc. associated with the dialogue level in Chinesepod.com.  At the Newbie level, vocabulary is provided, and answers are required in Pinyin along with tone numbers [1-4].  At higher levels selectable options for simplified or traditional characters are available.
 - Selectable Chat-bot/friend to pose the questions.
 - Opportunities to earn bonus points by correctly identifying non-dialogue, but common, vocabulary at random times.  Examples at the Newbie level include numbers 1-10, directions (bei[2], nan[2] …) , and colors.  At the Elementary level: seasons of the year, time of day, adverbs (always, never, often, sometimes, …).  At the Intermediate level, counting words, conjunctions, etc.
+- Add a way to associate vocab. words to pictures
+- Integrate various game flows while waiting for the review
+- Identify goals to work towards and bonuses for points gained during the game
 
 The structure of the game is based on the educational research findings presented by Peter Brown in his book “Make it Stick” in which the learning process is characterized as the effort to slow the forgetting process.   The book convincingly demonstrates that remembering, or learning information is best accomplished via the struggle to pull items from our fading memories rather than by looking at the information a second, third or fourth time.  The core idea for this game is to reward the process of pulling information back from the player’s fading memory and therefore enhance the process of making it stick.
+
+You can install the current prototype via: https://testflight.apple.com/join/IV00haIS
 
 ### Examples (partly) used in the current prototype
 
