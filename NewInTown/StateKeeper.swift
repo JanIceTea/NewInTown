@@ -15,13 +15,15 @@ struct GameState: Codable {
     var timeToWait: TimeInterval = 0
     var date: Date
     var didSeeDialog: Bool = false
+    var didSeeVocab: Bool = false
+
 }
 
 class StateKeeper {
     
     static let shared: StateKeeper = StateKeeper()
     
-    private(set) var gameState = GameState(points: 0, currentStoryLineId: "B3045_1", currentDialogIndex:0, timeToWait: 0, date: Date(), didSeeDialog: false)
+    private(set) var gameState = GameState(points: 0, currentStoryLineId: "B3045_1", currentDialogIndex:0, timeToWait: 0, date: Date(), didSeeDialog: false, didSeeVocab: false)
     private let documentName: String = "gamestate.json"
     
     var timeToWaitForNextSoryLine: TimeInterval {
@@ -29,7 +31,7 @@ class StateKeeper {
     }
     
     func reset() {
-        gameState = GameState(points: 0, currentStoryLineId: "B3045_1", currentDialogIndex:0, timeToWait: 0, date: Date(), didSeeDialog: false)
+        gameState = GameState(points: 0, currentStoryLineId: "B3045_1", currentDialogIndex:0, timeToWait: 0, date: Date(), didSeeDialog: false, didSeeVocab: false)
     }
     
     func timeToWaitForNextSoryLine(for date: Date) -> TimeInterval {
@@ -47,6 +49,11 @@ class StateKeeper {
     
     func setDidSeeDialog() {
         gameState.didSeeDialog = true
+        writeSettings()
+    }
+    
+    func setDidSeeVocab() {
+        gameState.didSeeVocab = true
         writeSettings()
     }
     

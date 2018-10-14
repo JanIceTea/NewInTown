@@ -12,6 +12,7 @@ class EntryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        UINavigationBar.appearance().tintColor = UIColor.gray
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,9 +21,9 @@ class EntryViewController: UIViewController {
     }
     
     @IBAction func didPressStartButton(_ sender: Any) {
+        
         var viewController: UIViewController?
         if StateKeeper.shared.gameState.didSeeDialog {
-//            viewController = FirstSceneViewController(nibName: nil, bundle: nil)
             viewController = VocabOverviewViewController(nibName: nil, bundle: nil)
 
         } else {

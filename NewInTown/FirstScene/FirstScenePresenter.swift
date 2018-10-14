@@ -35,17 +35,30 @@ class FirstScenePresenter: FirstScenePresentationLogic {
         viewModel.nextQuestion = dialog.question.english
         viewModel.timeToWaitString = response.timeToWaitString
         
-        if response.isBlockedForNext {
-            viewController?.displayWaiting(withTimeString: viewModel.timeToWaitString)
-            viewController?.displayScore(withString: viewModel.scoreString)
-        } else {
-            if response.hasCorrectAnswer {
+        if let hasCorrectAnswer = response.hasCorrectAnswer {
+            if hasCorrectAnswer {
                 viewController?.displaySuccess(withMessage: "Great - Going to the next!")
             } else {
                 viewController?.displayFailure(withMessage: "Ooops! Try again!")
             }
-            viewController?.displayFirstScene(viewModel: viewModel)
+            
+            if response.isBlockedForNext {
+                viewController?.displayWaiting(withTimeString: viewModel.timeToWaitString)
+                viewController?.displayScore(withString: viewModel.scoreString)
+            } else {
+                viewController?.displayFirstScene(viewModel: viewModel)
+            }
+            
+        } else {
+            if response.isBlockedForNext {
+                viewController?.displayWaiting(withTimeString: viewModel.timeToWaitString)
+                viewController?.displayScore(withString: viewModel.scoreString)
+            } else {
+                viewController?.displayFirstScene(viewModel: viewModel)
+            }
         }
+        
+
     }
     
     func updateWaitingTime(withString timeString: String) {

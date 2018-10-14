@@ -49,13 +49,15 @@ class FirstSceneInteractor: FirstSceneBusinessLogic, FirstSceneDataStore {
         guard let dialog = worker.getDialog(forStoryLineId: currentStoryLineId, atIndex: currentDialogIndex) else {
             return
         }
-        response.hasCorrectAnswer = (answer == dialog.answer.pinyin) || (answer == dialog.answer.chinese)
-        if response.hasCorrectAnswer {
+        let hasCorrectAnswer = (answer == dialog.answer.pinyin) || (answer == dialog.answer.chinese)
+        if hasCorrectAnswer {
             currentScore = currentScore + dialog.points
             currentDialogIndex = currentDialogIndex + 1
         } else {
             currentScore = currentScore - 5
         }
+        
+        response.hasCorrectAnswer = hasCorrectAnswer
         
         let nextStoryLineId = worker.getNextStoryLineId(forStoryLineId: currentStoryLineId, atIndex: currentDialogIndex)
         nextWaitTime = 0
@@ -97,7 +99,7 @@ class FirstSceneInteractor: FirstSceneBusinessLogic, FirstSceneDataStore {
         response.nextIndex = currentDialogIndex
         response.timeToWaitString = String(Int(nextWaitTime.rounded()))
         response.isBlockedForNext = nextWaitTime > 0
-        
+        response.hasCorrectAnswer = nil
         presenter?.updateFirstScene(response: response)
         
         if(response.isBlockedForNext) {

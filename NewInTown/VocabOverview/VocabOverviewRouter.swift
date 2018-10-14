@@ -31,7 +31,11 @@ class VocabOverviewRouter: NSObject, VocabOverviewRoutingLogic, VocabOverviewDat
     func routeToNext() {
         let destinationVC = FirstSceneViewController(nibName: nil, bundle: nil)
         StateKeeper.shared.setDidSeeDialog()
-        StateKeeper.shared.setGameState(points: 0, storyLineId: "B3045_1", dialogIndex: 0, timeToWait: durationToWait)
+        let gameState = StateKeeper.shared.gameState
+        if !gameState.didSeeVocab {
+            StateKeeper.shared.setGameState(points: 0, storyLineId: "B3045_1", dialogIndex: 0, timeToWait: durationToWait)
+            StateKeeper.shared.setDidSeeVocab()
+        }
         navigateToFirstScene(source: viewController!, destination: destinationVC)
     }
     

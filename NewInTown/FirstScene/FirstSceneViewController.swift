@@ -91,7 +91,7 @@ class FirstSceneViewController: UIViewController, FirstSceneDisplayLogic, UIText
     }
     
     private func setupUI() {
-        
+        addCloseButton()
     }
     
     private func setupAccessibilityIdentifers() {
@@ -118,6 +118,7 @@ class FirstSceneViewController: UIViewController, FirstSceneDisplayLogic, UIText
         dialogContentView.isHidden = false
         timeLeftLabel.isHidden = true
         infoToastContentView.isHidden = true
+        waitInfoContentView.isHidden = true
     }
     
     private func displayInfoToast(withMessage message:String, completion: ((Bool) -> Swift.Void)? = nil) {
@@ -167,6 +168,22 @@ class FirstSceneViewController: UIViewController, FirstSceneDisplayLogic, UIText
         textField.resignFirstResponder()
         performRequest()
         return false
+    }
+    
+    // MARK: - Close button
+    //todo refactor
+    
+    private func addCloseButton() {
+        let button = UIButton(type: .custom)
+        button.setTitle("close", for: .normal)
+        button.setTitleColor(UIColor.gray, for: .normal)
+        button.bounds = CGRect(x: 0, y: 0, width: 80, height: 44)
+        button.addTarget(self, action: #selector(didPressCloseButton), for: .touchUpInside)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
+    }
+    
+    @IBAction private func didPressCloseButton() {
+        presentingViewController?.dismiss(animated: true)
     }
 }
 

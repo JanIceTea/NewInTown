@@ -23,7 +23,7 @@ enum FirstScene {
         }
         
         struct Response {
-            var hasCorrectAnswer: Bool = false
+            var hasCorrectAnswer: Bool?
             var score: Int = 0
             var nextIndex: Int = 0
             var storyLineId: String = ""
