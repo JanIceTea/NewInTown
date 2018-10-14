@@ -200,3 +200,4 @@ Q: Time to offer some help.  How do you say ‘I will help you look?’
 	A: wo[3] bang[1] ni[3] zhao[3]
 
 John Pfotenhauer & Jan Trutzschler
+Illustration: Gabriele Trutzschler
