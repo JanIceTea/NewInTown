@@ -30,8 +30,15 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9X-Hd-gzE">
                     <rect key="frame" x="0.0" y="10" width="667" height="365"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Restaurant_1" translatesAutoresizingMaskIntoConstraints="NO" id="f9a-E2-3N9">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just arrived in the new town? Yo're hungy, right? So let's go to a restaurant! [ Tap on this part of the screen to continue]" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UZ-1K-mHb">
+                            <rect key="frame" x="20" y="162" width="627" height="41"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f9a-E2-3N9">
                             <rect key="frame" x="0.0" y="0.0" width="667" height="365"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </imageView>
                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SMR-0d-glQ" customClass="SpeechBubbleView" customModule="NewInTown" customModuleProvider="target">
                             <rect key="frame" x="180" y="60" width="180" height="84"/>
@@ -55,9 +62,12 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="4UZ-1K-mHb" firstAttribute="leading" secondItem="Q9X-Hd-gzE" secondAttribute="leading" constant="20" id="2SV-OO-mIa"/>
                         <constraint firstItem="SMR-0d-glQ" firstAttribute="top" secondItem="Q9X-Hd-gzE" secondAttribute="top" constant="60" id="EGs-Fg-K47"/>
+                        <constraint firstItem="4UZ-1K-mHb" firstAttribute="centerY" secondItem="Q9X-Hd-gzE" secondAttribute="centerY" id="H7J-dg-8AJ"/>
                         <constraint firstItem="f9a-E2-3N9" firstAttribute="leading" secondItem="Q9X-Hd-gzE" secondAttribute="leading" id="KbZ-5B-5fi"/>
                         <constraint firstAttribute="bottom" secondItem="f9a-E2-3N9" secondAttribute="bottom" id="KeE-aX-zTL"/>
+                        <constraint firstAttribute="trailing" secondItem="4UZ-1K-mHb" secondAttribute="trailing" constant="20" id="Xdx-0N-KjI"/>
                         <constraint firstItem="f9a-E2-3N9" firstAttribute="top" secondItem="Q9X-Hd-gzE" secondAttribute="top" id="jKT-Hy-GGM"/>
                         <constraint firstAttribute="trailing" secondItem="f9a-E2-3N9" secondAttribute="trailing" id="mGa-5h-wi1"/>
                         <constraint firstItem="SMR-0d-glQ" firstAttribute="leading" secondItem="Q9X-Hd-gzE" secondAttribute="leading" constant="180" id="ojm-Ui-fxa"/>
@@ -134,7 +144,4 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
     </objects>
-    <resources>
-        <image name="Restaurant_1" width="1334" height="750"/>
-    </resources>
 </document>

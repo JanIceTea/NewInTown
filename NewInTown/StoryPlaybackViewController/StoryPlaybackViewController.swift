@@ -15,7 +15,7 @@ import UIKit
 class SpeechBubbleView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
-        layer.cornerRadius = 20
+        layer.cornerRadius = 12
         layer.borderWidth = 2
         layer.borderColor = UIColor.black.cgColor
     }
@@ -149,6 +149,7 @@ class StoryPlaybackViewController: UIViewController, StoryPlaybackDisplayLogic {
         controlView.isHidden = viewModel.shouldShowNextButton
         
         if let imageName = viewModel.imageName {
+            imageview.isHidden = false
             imageview.image = UIImage(named: imageName)
         }
         

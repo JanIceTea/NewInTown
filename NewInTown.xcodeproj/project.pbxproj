@@ -47,11 +47,11 @@
 		3D7D275D216FE5C7002A333D /* chinesepod_B3045dg_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D2757216FE5C7002A333D /* chinesepod_B3045dg_4.mp3 */; };
 		3DA6E57D21693D8600F85A37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6E57C21693D8600F85A37 /* AppDelegate.swift */; };
 		3DA6E57F21693D8600F85A37 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6E57E21693D8600F85A37 /* EntryViewController.swift */; };
-		3DA6E58221693D8600F85A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DA6E58021693D8600F85A37 /* Main.storyboard */; };
 		3DA6E58421693D8900F85A37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DA6E58321693D8900F85A37 /* Assets.xcassets */; };
 		3DA6E58721693D8900F85A37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DA6E58521693D8900F85A37 /* LaunchScreen.storyboard */; };
 		3DA6E59221693D8900F85A37 /* NewInTownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6E59121693D8900F85A37 /* NewInTownTests.swift */; };
 		3DA6E59D21693D8900F85A37 /* NewInTownUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6E59C21693D8900F85A37 /* NewInTownUITests.swift */; };
+		3DC9D6E22173A2EA00C82548 /* EntryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DC9D6E12173A2EA00C82548 /* EntryViewController.xib */; };
 		F8A70B84A9D67348C80A2535 /* Pods_NewInTown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5003F5890319207385A4754A /* Pods_NewInTown.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,7 +113,6 @@
 		3DA6E57921693D8600F85A37 /* NewInTown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewInTown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DA6E57C21693D8600F85A37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DA6E57E21693D8600F85A37 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
-		3DA6E58121693D8600F85A37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DA6E58321693D8900F85A37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DA6E58621693D8900F85A37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DA6E58821693D8900F85A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,6 +122,7 @@
 		3DA6E59821693D8900F85A37 /* NewInTownUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewInTownUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DA6E59C21693D8900F85A37 /* NewInTownUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInTownUITests.swift; sourceTree = "<group>"; };
 		3DA6E59E21693D8900F85A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DC9D6E12173A2EA00C82548 /* EntryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryViewController.xib; sourceTree = "<group>"; };
 		5003F5890319207385A4754A /* Pods_NewInTown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewInTown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8917A2FA69860CB0B85D3EEF /* Pods-NewInTown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewInTown.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewInTown/Pods-NewInTown.release.xcconfig"; sourceTree = "<group>"; };
 		C7CCE7876CD0AB134E7ACED5 /* Pods-NewInTown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewInTown.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewInTown/Pods-NewInTown.debug.xcconfig"; sourceTree = "<group>"; };
@@ -257,7 +257,6 @@
 				3D24D00A216D2B83005E63B5 /* FirstScene */,
 				3DA6E5AA21694A1200F85A37 /* EntryViewController */,
 				3DA6E57C21693D8600F85A37 /* AppDelegate.swift */,
-				3DA6E58021693D8600F85A37 /* Main.storyboard */,
 				3DA6E58321693D8900F85A37 /* Assets.xcassets */,
 				F980F78F584A78E7B94159B8 /* Pods */,
 				3DA6E58521693D8900F85A37 /* LaunchScreen.storyboard */,
@@ -289,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				3DA6E57E21693D8600F85A37 /* EntryViewController.swift */,
+				3DC9D6E12173A2EA00C82548 /* EntryViewController.xib */,
 			);
 			path = EntryViewController;
 			sourceTree = "<group>";
@@ -428,7 +428,7 @@
 				3D7D275B216FE5C7002A333D /* chinesepod_B3045dg_1.mp3 in Resources */,
 				3D7D2759216FE5C7002A333D /* chinesepod_B3045dg_5.mp3 in Resources */,
 				3D7D273E216FD65F002A333D /* chinesepod_B3045.json in Resources */,
-				3DA6E58221693D8600F85A37 /* Main.storyboard in Resources */,
+				3DC9D6E22173A2EA00C82548 /* EntryViewController.xib in Resources */,
 				3D49DB8D21727F81002F3685 /* VocabOverviewViewController.xib in Resources */,
 				3D7D273C216FD4A5002A333D /* chinesepod_B3045dg.mp3 in Resources */,
 				3D7D275A216FE5C7002A333D /* chinesepod_B3045dg_6.mp3 in Resources */,
@@ -574,14 +574,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3DA6E58021693D8600F85A37 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3DA6E58121693D8600F85A37 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3DA6E58521693D8900F85A37 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

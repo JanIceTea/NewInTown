@@ -8,8 +8,18 @@
 
 import UIKit
 
-class EntryViewController: UIViewController {
+class TextBackgroundView: UIView {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        layer.cornerRadius = 6
+        layer.borderWidth = 0
+    }
+}
 
+class EntryViewController: UIViewController {
+    
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var textContentView: TextBackgroundView!
     override func viewDidLoad() {
         super.viewDidLoad()
         UINavigationBar.appearance().tintColor = UIColor.gray
@@ -18,6 +28,20 @@ class EntryViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        startButton.alpha = 0
+        textContentView.alpha = 0
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIView.animate(withDuration: 0.7, delay: 1, options: .curveEaseIn, animations: {
+            self.startButton.alpha = 1
+            self.textContentView.alpha = 1
+        })
     }
     
     @IBAction func didPressStartButton(_ sender: Any) {
