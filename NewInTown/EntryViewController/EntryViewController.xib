@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EntryViewController" customModule="NewInTown" customModuleProvider="target">
+            <connections>
+                <outlet property="startButton" destination="SeB-4w-E1I" id="Rvk-1J-NN7"/>
+                <outlet property="textContentView" destination="Jlo-Ap-97r" id="INj-jp-tzG"/>
+                <outlet property="view" destination="z1I-cY-Iiz" id="gLA-8m-0rt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="z1I-cY-Iiz">
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NewInTown" translatesAutoresizingMaskIntoConstraints="NO" id="GxE-1Q-eH5">
+                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jlo-Ap-97r" customClass="TextBackgroundView" customModule="NewInTown" customModuleProvider="target">
+                    <rect key="frame" x="20" y="20" width="627" height="178.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbJ-NW-9nJ">
+                            <rect key="frame" x="8" y="8" width="611" height="162.5"/>
+                            <mutableString key="text">Hi – it looks like you are new in town.  Welcome.  There are many things to discover here – good restaurants, beautiful sights, lots of fun places to visit and interesting things to do.
+Listen carefully to the conversations around you.  You will need the information later in order to find your way around.  Just like in real life, you will want to use the key phrases and words not immediately, but later – like 4 hours, 8 hours, 12 hours, or even 24 hours later.  Good luck.  And again – welcome to your new town.</mutableString>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.80452244718309862" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="KbJ-NW-9nJ" secondAttribute="trailing" constant="8" id="14K-nw-veE"/>
+                        <constraint firstAttribute="bottom" secondItem="KbJ-NW-9nJ" secondAttribute="bottom" constant="8" id="27Q-gh-xnB"/>
+                        <constraint firstItem="KbJ-NW-9nJ" firstAttribute="leading" secondItem="Jlo-Ap-97r" secondAttribute="leading" constant="8" id="7Q9-TY-ZHs"/>
+                        <constraint firstItem="KbJ-NW-9nJ" firstAttribute="top" secondItem="Jlo-Ap-97r" secondAttribute="top" constant="8" id="gS1-Xa-p5j"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeB-4w-E1I">
+                    <rect key="frame" x="20" y="311" width="627" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="K44-po-Cmj"/>
+                    </constraints>
+                    <state key="normal" title="Start">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="didPressStartButton:" destination="-1" eventType="touchUpInside" id="72a-Yv-sHc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEt-O6-cl8">
+                    <rect key="frame" x="384" y="271.5" width="263" height="30"/>
+                    <state key="normal" title="For test purposes you can RESET here">
+                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="didPressResetButton:" destination="-1" eventType="touchUpInside" id="LR0-pG-khq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Jlo-Ap-97r" firstAttribute="top" secondItem="ADm-qR-t1j" secondAttribute="top" constant="20" id="1TF-s1-HZA"/>
+                <constraint firstItem="ADm-qR-t1j" firstAttribute="trailing" secondItem="GxE-1Q-eH5" secondAttribute="trailing" id="7Zm-G6-eof"/>
+                <constraint firstItem="GxE-1Q-eH5" firstAttribute="leading" secondItem="ADm-qR-t1j" secondAttribute="leading" id="8eb-b4-jK6"/>
+                <constraint firstItem="GxE-1Q-eH5" firstAttribute="top" secondItem="ADm-qR-t1j" secondAttribute="top" id="In5-Rr-2YV"/>
+                <constraint firstItem="ADm-qR-t1j" firstAttribute="bottom" secondItem="GxE-1Q-eH5" secondAttribute="bottom" id="NrT-gY-Ran"/>
+                <constraint firstItem="ADm-qR-t1j" firstAttribute="trailing" secondItem="SeB-4w-E1I" secondAttribute="trailing" constant="20" id="Or1-SZ-x21"/>
+                <constraint firstItem="ADm-qR-t1j" firstAttribute="bottom" secondItem="SeB-4w-E1I" secondAttribute="bottom" constant="20" id="Qmk-3w-c5e"/>
+                <constraint firstItem="SeB-4w-E1I" firstAttribute="leading" secondItem="ADm-qR-t1j" secondAttribute="leading" constant="20" id="WwT-B1-4E6"/>
+                <constraint firstItem="Jlo-Ap-97r" firstAttribute="leading" secondItem="ADm-qR-t1j" secondAttribute="leading" constant="20" id="qiW-NT-Vob"/>
+                <constraint firstItem="ADm-qR-t1j" firstAttribute="trailing" secondItem="HEt-O6-cl8" secondAttribute="trailing" constant="20" id="ujC-KM-Cnu"/>
+                <constraint firstItem="SeB-4w-E1I" firstAttribute="top" secondItem="HEt-O6-cl8" secondAttribute="bottom" constant="9.5" id="xAg-by-HTY"/>
+                <constraint firstItem="ADm-qR-t1j" firstAttribute="trailing" secondItem="Jlo-Ap-97r" secondAttribute="trailing" constant="20" id="zTv-OV-Yqm"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ADm-qR-t1j"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="NewInTown" width="1280" height="857"/>
+    </resources>
+</document>
