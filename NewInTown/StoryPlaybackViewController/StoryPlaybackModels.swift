@@ -40,6 +40,7 @@ enum StoryPlayback {
             var text: StoryContentText?
             var isDialogFinished: Bool?
             var languageSelection: LanguageSelection?
+            var imageName: String?
         }
         
         struct ViewModel {
@@ -47,6 +48,7 @@ enum StoryPlayback {
             var
             dialogText: String?
             var shouldShowNextButton: Bool
+            var imageName: String?
         }
     }
 }

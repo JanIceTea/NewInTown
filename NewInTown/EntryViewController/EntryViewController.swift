@@ -35,6 +35,9 @@ class EntryViewController: UIViewController {
         button.bounds = CGRect(x: 0, y: 0, width: 80, height: 44)
         button.addTarget(self, action: #selector(didPressCloseButton), for: .touchUpInside)
         let navigationController = UINavigationController(rootViewController: viewController!)
+        navigationController.navigationBar.isTranslucent = true
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController.navigationBar.shadowImage = UIImage()
         viewController?.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
         present(navigationController, animated: true, completion: nil)
     }

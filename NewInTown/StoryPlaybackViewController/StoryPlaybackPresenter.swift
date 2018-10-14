@@ -37,7 +37,7 @@ class StoryPlaybackPresenter: StoryPlaybackPresentationLogic {
         if let textObj = response.text, let langSelection = response.languageSelection {
             text = textForLanguage(textObj, langSelection: langSelection)
         }
-        let viewModel = StoryPlayback.FetchStoryPlayback.ViewModel(playingState: response.playingState, dialogText: text, shouldShowNextButton: isDialogFinished)
+        let viewModel = StoryPlayback.FetchStoryPlayback.ViewModel(playingState: response.playingState, dialogText: text, shouldShowNextButton: isDialogFinished, imageName: response.imageName)
         viewController?.displayStoryPlayback(viewModel: viewModel)
     }
 }

@@ -59,6 +59,7 @@ struct StoryContent: Codable {
     var audioFileName: String
     var audioFileExtension: String
     var source: String
+    var imageName: String
 }
 
 struct StoryContentRoot: Codable {

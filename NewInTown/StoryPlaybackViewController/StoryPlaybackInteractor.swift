@@ -76,6 +76,7 @@ class StoryPlaybackInteractor: StoryPlaybackBusinessLogic, StoryPlaybackDataStor
         response.playingState = soundfilePlayerWorker.isPlaying ? .playing : .finished
         response.languageSelection = languageSelection
         response.isDialogFinished = isFinished
+        response.imageName = currentContent.imageName
         presenter?.presentStoryPlayback(response: response)
     }
     

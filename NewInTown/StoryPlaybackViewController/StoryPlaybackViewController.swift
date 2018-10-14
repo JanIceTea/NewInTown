@@ -12,6 +12,15 @@
 
 import UIKit
 
+class SpeechBubbleView: UIView {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        layer.cornerRadius = 20
+        layer.borderWidth = 2
+        layer.borderColor = UIColor.black.cgColor
+    }
+}
+
 protocol StoryPlaybackDisplayLogic: class {
     func displayStoryPlayback(viewModel: StoryPlayback.FetchStoryPlayback.ViewModel)
 }
@@ -23,6 +32,10 @@ class StoryPlaybackViewController: UIViewController, StoryPlaybackDisplayLogic {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var playAudioButton: UIButton!
     
+    @IBOutlet weak var controlView: UIView!
+    @IBOutlet weak var imageview: UIImageView!
+    
+    @IBOutlet weak var speechBubbleView: SpeechBubbleView!
     var interactor: StoryPlaybackBusinessLogic?
     var router: (NSObjectProtocol & StoryPlaybackRoutingLogic & StoryPlaybackDataPassing)?
     
@@ -117,6 +130,7 @@ class StoryPlaybackViewController: UIViewController, StoryPlaybackDisplayLogic {
     }
     
     func displayStoryPlayback(viewModel: StoryPlayback.FetchStoryPlayback.ViewModel) {
+        speechBubbleView.isHidden = viewModel.dialogText?.count == 0
         chineseDialogLabel.text = viewModel.dialogText
         guard let playingState = viewModel.playingState else {
             return
@@ -132,5 +146,11 @@ class StoryPlaybackViewController: UIViewController, StoryPlaybackDisplayLogic {
         }
         
         nextButton.isHidden = !viewModel.shouldShowNextButton
+        controlView.isHidden = viewModel.shouldShowNextButton
+        
+        if let imageName = viewModel.imageName {
+            imageview.image = UIImage(named: imageName)
+        }
+        
     }
 }
