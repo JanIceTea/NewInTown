@@ -18,6 +18,7 @@ The prototype provides a working example of the skeletal structure of the game. 
 - Add a way to associate vocab. words to pictures
 - Integrate various game flows while waiting for the review
 - Identify goals to work towards and bonuses for points gained during the game
+- Implement push notifications to notify the user that action possible
 
 The structure of the game is based on the educational research findings presented by Peter Brown in his book “Make it Stick” in which the learning process is characterized as the effort to slow the forgetting process.   The book convincingly demonstrates that remembering, or learning information is best accomplished via the struggle to pull items from our fading memories rather than by looking at the information a second, third or fourth time.  The core idea for this game is to reward the process of pulling information back from the player’s fading memory and therefore enhance the process of making it stick.
 
