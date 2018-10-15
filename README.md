@@ -22,7 +22,8 @@ The prototype provides a working example of the skeletal structure of the game. 
 
 The structure of the game is based on the educational research findings presented by Peter Brown in his book “Make it Stick” in which the learning process is characterized as the effort to slow the forgetting process.   The book convincingly demonstrates that remembering, or learning information is best accomplished via the struggle to pull items from our fading memories rather than by looking at the information a second, third or fourth time.  The core idea for this game is to reward the process of pulling information back from the player’s fading memory and therefore enhance the process of making it stick.
 
-You can install the current prototype via: https://testflight.apple.com/join/IV00haIS
+You can install the current prototype (iOS) via: https://testflight.apple.com/join/IV00haIS
+Please note that the prototype uses audio.
 
 ### Examples (partly) used in the current prototype
 
