@@ -41,18 +41,18 @@ class FirstSceneInteractorTest: XCTestCase {
         XCTAssert(interactor.nextWaitTime == 240)
         XCTAssert(response.score == 10)
         XCTAssert(response.nextIndex == 0)
-        XCTAssert(response.hasCorrectAnswer)
+        XCTAssert(response.hasCorrectAnswer!)
         XCTAssert(response.isBlockedForNext)
-        XCTAssert(response.timeToWaitString == "240.0")
+        XCTAssert(response.timeToWaitString == "240")
         
         interactor = FirstSceneInteractor()
         interactor.presenter = presenter
         interactor.restoreFromGameState()
         XCTAssert(response.score == 10)
         XCTAssert(response.nextIndex == 0)
-        XCTAssert(response.hasCorrectAnswer)
+        XCTAssert(response.hasCorrectAnswer!)
         XCTAssert(response.isBlockedForNext)
-        XCTAssert(response.timeToWaitString == "240.0")
+        XCTAssert(response.timeToWaitString == "240")
 
         let storedDate = StateKeeper.shared.gameState.date
         let interval: TimeInterval = 120
